@@ -96,26 +96,26 @@ export default function MainPage() {
                         </div>
                         <div className="sec">
                             <div className="top">
-                                <div className="t">2023 Q3</div>
-                            </div>
-                            <div className="bottom"> * Integrated Polygon and TRON networks<br /> * Launch version
-                                1.0. Supports Token Staking Mining on BSC, Polygon , and TRON networks<br /> *
-                                Building the BitGoblin Community<br /> * Feedback BitGoblin users with airdrop
-                                of voucher NFTs —CalcKeyNFT<br /> * Open CalcProof Mining Campaign for
-                                CalcKeyNFT Holders<br />
-                            </div>
-
-                        </div>
-                    </div>
-                    <div className="bit-timeLine">
-                        <div className="fit">
-                            <div className="top">
                                 <div className="t">2023 Q2</div>
                             </div>
                             <div className="bottom"> * Design protocol<br /> * Integrate with BSC
                                 network<br /> * Design and develop web page<br /> * Private environment
                                 test.<br /> * Launch version 1.0. Supports Token Staking Mining on BSC
                                 network<br />
+                            </div>
+                        </div>
+                    </div>
+                    <div className="bit-timeLine">
+                        <div className="fit">
+                            <div className="top">
+                                <div className="t">2023 Q3</div>
+                            </div>
+
+                            <div className="bottom"> * Integrated Polygon and TRON networks<br /> * Launch version
+                                1.0. Supports Token Staking Mining on BSC, Polygon , and TRON networks<br /> *
+                                Building the BitGoblin Community<br /> * Feedback BitGoblin users with airdrop
+                                of voucher NFTs —CalcKeyNFT<br /> * Open CalcProof Mining Campaign for
+                                CalcKeyNFT Holders<br />
                             </div>
                         </div>
                         <div className="sec">

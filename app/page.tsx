@@ -1,9 +1,10 @@
 import Image from 'next/image';
 import MainPage from '@/components';
+import ConnectWallet from '@/components/connectWalelt';
+
+
 
 export default function Home() {
-
-
   return (
     <main className="flex min-h-screen flex-col items-center justify-between p-24">
       <div id="app" data-v-app="">
@@ -23,8 +24,8 @@ export default function Home() {
                         aria-haspopup="true">
                         <span>...</span><span className="arco-menu-icon-suffix"><svg viewBox="0 0 48 48"
                           fill="none" xmlns="http://www.w3.org/2000/svg" stroke="currentColor"
-                          className="arco-icon arco-icon-down" stroke-width="4" stroke-linecap="butt"
-                          stroke-linejoin="miter">
+                          className="arco-icon arco-icon-down" strokeWidth="4" strokeLinecap="butt"
+                          strokeLinejoin="miter">
                           <path d="M39.6 17.443 24.043 33 8.487 17.443"></path>
                         </svg></span>
                       </div>
@@ -70,13 +71,7 @@ export default function Home() {
                   </div>
                 </div>
               </div>
-              <div className="bit-buoy-mobile" data-v-c7418f94="">
-                <div className="buoy-list">
-                  <div className="buoy-item" style={{ width: "10%" }}>
-                    <div className="btn">Connect Wallet</div>
-                  </div>
-                </div>
-              </div>
+              <ConnectWallet></ConnectWallet>
             </div>
             <MainPage></MainPage>
 
