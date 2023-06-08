@@ -1,0 +1,1318 @@
+.bit-home .bit-about {
+    margin: 0 auto;
+    width: 1200px
+}
+
+.bit-home .bit-about .video-content {
+    position: relative
+}
+
+.bit-home .bit-about .video-content .content {
+    margin-top: 60px;
+    height: 400px;
+    display: flex;
+    gap: 20px
+}
+
+.bit-home .bit-about .video-content .content .video {
+    flex: 1 1;
+    padding: 19px;
+    border: 1px solid #CECECE;
+    border-radius: 24px;
+    box-sizing: border-box
+}
+
+.bit-home .bit-about .video-content .content .video .video-tag {
+    border-radius: 12px;
+    width: 100%;
+    height: 100%
+}
+
+.bit-home .bit-about .video-content .content .des {
+    flex: 1;
+    margin-top: 100px
+}
+
+.bit-home .bit-about .video-content .content .des .title {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 38px;
+    line-height: 42px;
+    text-align: left;
+    text-transform: capitalize;
+    color: #fff
+}
+
+.bit-home .bit-about .video-content .content .des .content {
+    margin-top: 20px;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 30px;
+    text-transform: capitalize;
+    color: #d8d8d8
+}
+
+.bit-home .bit-about .video-content .bg-1 {
+    position: absolute;
+    top: 0;
+    width: 50%;
+    height: 400px;
+    background: #42FC01;
+    mix-blend-mode: lighten;
+    opacity: .2;
+    filter: blur(245px)
+}
+
+.bit-home .bit-about .video-content .bg-2 {
+    position: absolute;
+    left: 30%;
+    bottom: -50px;
+    width: 606px;
+    height: 92px;
+    background: url(/assets/bitforhe-18e5590e.png) no-repeat;
+    background-size: cover
+}
+
+.bit-home .bit-about .about-content {
+    margin-top: 80px;
+    display: flex;
+    flex-direction: column
+}
+
+.bit-home .bit-about .about-content .about-title {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 40px
+}
+
+.bit-home .bit-about .about-content .about-title span {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 38px;
+    line-height: 42px;
+    text-align: justify;
+    text-transform: uppercase
+}
+
+.bit-home .bit-about .about-content .content {
+    background: url(/assets/home-about-bg-e1735dea.png) no-repeat;
+    background-size: 100%;
+    height: 250px;
+    padding: 90px 72px
+}
+
+.bit-home .bit-about .about-content .content .title {
+    text-align: center;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 42px;
+    text-transform: uppercase;
+    color: #fff
+}
+
+.bit-home .bit-about .about-content .content .des {
+    margin-top: 40px;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 30px;
+    color: #d8d8d8
+}
+
+@media screen and (max-width: 1000px) {
+    .bit-home .bit-about {
+        display: flex;
+        flex-direction: column;
+        width: 100%
+    }
+
+    .bit-home .bit-about .video-content {
+        position: relative
+    }
+
+    .bit-home .bit-about .video-content .content {
+        flex-direction: column;
+        height: 100%;
+        margin-top: 0
+    }
+
+    .bit-home .bit-about .video-content .content .video {
+        border: none;
+        padding: 0
+    }
+
+    .bit-home .bit-about .video-content .content .video .video-tag {
+        width: 100%;
+        height: auto
+    }
+
+    .bit-home .bit-about .video-content .content .des {
+        flex: 1;
+        margin: 0
+    }
+
+    .bit-home .bit-about .video-content .content .des .title {
+        font-size: 30px
+    }
+
+    .bit-home .bit-about .video-content .content .des .content {
+        margin-top: 0;
+        padding: 5px;
+        font-size: 15px;
+        color: #fff
+    }
+
+    .bit-home .bit-about .video-content .bg-1 {
+        width: 100%
+    }
+
+    .bit-home .bit-about .video-content .bg-2 {
+        display: none
+    }
+
+    .bit-home .bit-about .about-content {
+        margin-top: 20px
+    }
+
+    .bit-home .bit-about .about-content .about-title {
+        margin-bottom: 20px
+    }
+
+    .bit-home .bit-about .about-content .about-title span {
+        font-size: 22px
+    }
+
+    .bit-home .bit-about .about-content .content {
+        width: auto;
+        height: 100%;
+        padding: 10px;
+        background-size: cover;
+        background-position: center
+    }
+
+    .bit-home .bit-about .about-content .content .title {
+        text-align: left;
+        font-size: 22px
+    }
+
+    .bit-home .bit-about .about-content .content .des {
+        padding: 5px;
+        margin-top: 0;
+        font-size: 14px
+    }
+}
+
+.bit-home .bit-started {
+    margin: 90px auto 0;
+    width: 1200px
+}
+
+.bit-home .bit-started .title {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 5px
+}
+
+.bit-home .bit-started .title span {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 38px;
+    line-height: 42px;
+    text-align: justify
+}
+
+.bit-home .bit-started .title-des {
+    font-size: 18px;
+    line-height: 42px;
+    margin-bottom: 45px
+}
+
+.bit-home .bit-started .content .list {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 30px
+}
+
+.bit-home .bit-started .content .list .item {
+    gap: 10px;
+    background: #010D50;
+    border-radius: 20px;
+    padding: 30px 15px
+}
+
+.bit-home .bit-started .content .list .item .tag {
+    font-family: Quantico;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 38px;
+    line-height: 65px;
+    text-transform: uppercase;
+    color: #0a0a0a;
+    background-size: cover
+}
+
+.bit-home .bit-started .content .list .item .tag img {
+    max-width: 68px
+}
+
+.bit-home .bit-started .content .list .item .step {
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 26px;
+    margin-bottom: 10px
+}
+
+.bit-home .bit-started .content .list .item .des {
+    flex: 1;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 22px;
+    text-align: justify;
+    text-transform: capitalize;
+    color: #fff
+}
+
+@media screen and (max-width: 1000px) {
+    .bit-home .bit-started {
+        width: 100%;
+        margin-top: 60px
+    }
+
+    .bit-home .bit-started .title {
+        margin-bottom: 5px
+    }
+
+    .bit-home .bit-started .title span {
+        font-size: 30px
+    }
+
+    .bit-home .bit-started .title-des {
+        line-height: 24px
+    }
+
+    .bit-home .bit-started .content .list {
+        grid-template-columns: 1fr
+    }
+
+    .bit-home .bit-started .content .list .item {
+        display: flex;
+        flex-direction: column;
+        gap: 10px
+    }
+
+    .bit-home .bit-started .content .list .item .tag {
+        width: 42px;
+        height: 42px;
+        line-height: 42px;
+        font-size: 18px
+    }
+
+    .bit-home .bit-started .content .list .item .step {
+        margin-bottom: 0;
+        margin-top: 28px
+    }
+
+    .bit-home .bit-started .content .list .item .des {
+        font-size: 16px
+    }
+}
+
+.bit-home .bit-calculator {
+    margin-top: 90px;
+    margin-bottom: 90px;
+    background: #0328EE
+}
+
+.bit-home .bit-calculator .content {
+    padding: 55px 40px;
+    border-radius: 6px;
+    margin: 0 auto;
+    width: 1200px
+}
+
+.bit-home .bit-calculator .content .title {
+    display: flex;
+    gap: 10px
+}
+
+.bit-home .bit-calculator .content .title span {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 38px;
+    line-height: 42px;
+    text-align: justify
+}
+
+.bit-home .bit-calculator .content .des {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 32px;
+    text-align: justify;
+    text-transform: capitalize;
+    color: #fff;
+    margin-bottom: 30px
+}
+
+.bit-home .bit-calculator .content .bg-box {
+    padding: 30px 40px;
+    background: #010D50;
+    border-radius: 20px;
+    display: grid;
+    grid-template-columns: 30% 20% 50%;
+    justify-content: center;
+    align-items: center
+}
+
+.bit-home .bit-calculator .content .bg-box .tips-mobile {
+    display: none;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 32px;
+    text-align: justify;
+    text-transform: capitalize;
+    color: #d6f492
+}
+
+.bit-home .bit-calculator .content .bg-box .input-box {
+    display: flex;
+    flex-direction: column;
+    gap: 20px
+}
+
+.bit-home .bit-calculator .content .bg-box .input-box .titles {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 35px;
+    line-height: 55px;
+    display: flex;
+    align-items: center;
+    text-transform: capitalize;
+    color: #fff
+}
+
+.bit-home .bit-calculator .content .bg-box .input-edit {
+    height: 60px;
+    border-radius: 10px
+}
+
+.bit-home .bit-calculator .content .bg-box .input-edit .arco-input-suffix {
+    padding-left: 15px;
+    padding-right: 15px
+}
+
+.bit-home .bit-calculator .content .bg-box .day-box {
+    width: 100%;
+    display: flex;
+    justify-content: end;
+    margin-top: 75px;
+    font-weight: 700;
+    font-size: 25px
+}
+
+.bit-home .bit-calculator .content .bg-box .day-box .usd-mobile {
+    display: none
+}
+
+.bit-home .bit-calculator .content .bg-box .result-box {
+    margin-top: 75px;
+    margin-left: 40px;
+    display: grid;
+    grid-template-columns: 38% 62%
+}
+
+.bit-home .bit-calculator .content .bg-box .result-box span {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 48px;
+    display: flex;
+    align-items: center;
+    text-transform: capitalize;
+    color: #fff;
+    opacity: .5
+}
+
+.bit-home .bit-calculator .content .bg-box .result-box span.price {
+    background: rgba(112, 134, 255, .2);
+    border-radius: 10px;
+    padding: 6px 15px;
+    width: auto
+}
+
+.bit-home .bit-calculator .content .bg-box .result-box .price span {
+    margin-left: 10px;
+    color: #85fd01;
+    font-size: 36px
+}
+
+.bit-home .bit-calculator .content .tips {
+    margin-top: 10px;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 32px;
+    text-align: justify;
+    text-transform: capitalize;
+    color: #d6f492
+}
+
+@media screen and (max-width: 1000px) {
+    .bit-home .bit-calculator {
+        margin-top: 70px;
+        margin-bottom: 70px;
+        border-radius: 10px
+    }
+
+    .bit-home .bit-calculator .content {
+        width: 100%;
+        padding: 10px
+    }
+
+    .bit-home .bit-calculator .content .title {
+        margin-bottom: 5px
+    }
+
+    .bit-home .bit-calculator .content .title span {
+        font-size: 30px
+    }
+
+    .bit-home .bit-calculator .content .des {
+        font-size: 18px;
+        display: none
+    }
+
+    .bit-home .bit-calculator .content .bg-box {
+        padding: 0 !important;
+        background-color: transparent !important;
+        display: inline-block;
+        width: 90%;
+        margin: 0 auto 0 3%
+    }
+
+    .bit-home .bit-calculator .content .bg-box .input-box {
+        gap: 0
+    }
+
+    .bit-home .bit-calculator .content .bg-box .input-box .titles {
+        font-size: 20px
+    }
+
+    .bit-home .bit-calculator .content .bg-box .input-box .input-edit {
+        height: 45px;
+        border-radius: 5px
+    }
+
+    .bit-home .bit-calculator .content .bg-box .tips-mobile {
+        display: block !important
+    }
+
+    .bit-home .bit-calculator .content .bg-box .day-box {
+        margin-top: 10px;
+        justify-content: left !important;
+        font-size: 20px
+    }
+
+    .bit-home .bit-calculator .content .bg-box .day-box .usd-mobile {
+        display: block !important
+    }
+
+    .bit-home .bit-calculator .content .bg-box .result-box {
+        margin: 15px 0 0 !important;
+        grid-template-columns: 1fr 1fr !important
+    }
+
+    .bit-home .bit-calculator .content .bg-box .result-box span {
+        font-size: 14px !important;
+        line-height: normal !important;
+        border-bottom: none !important
+    }
+
+    .bit-home .bit-calculator .content .bg-box .result-box .price {
+        flex: 1;
+        justify-content: end !important
+    }
+
+    .bit-home .bit-calculator .content .bg-box .result-box .price span {
+        font-size: 30px !important
+    }
+
+    .bit-home .bit-calculator .content .bg-box .usd {
+        display: none !important
+    }
+
+    .bit-home .bit-calculator .tips {
+        display: none
+    }
+}
+
+.bit-road {
+    margin: 0 auto 90px;
+    width: 1200px
+}
+
+.bit-road .tit {
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    height: 61px;
+    font-weight: 700;
+    line-height: 61px;
+    border-radius: 40px;
+    font-size: 38px;
+    margin-bottom: 10px
+}
+
+.bit-road .tips {
+    font-size: 18px;
+    line-height: 32px;
+    margin-bottom: 70px
+}
+
+.bit-road .bit-time-info {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 40px
+}
+
+.bit-road .bit-time-info .bit-timeLine {
+    background-size: cover;
+    background-position: center;
+    padding: 20px 0
+}
+
+.bit-road .bit-time-info .bit-timeLine .fit,
+.bit-road .bit-time-info .bit-timeLine .thid {
+    background: #010D50;
+    border-radius: 40px;
+    padding: 50px 40px;
+    margin-bottom: 40px
+}
+
+.bit-road .bit-time-info .bit-timeLine .fit .top .t,
+.bit-road .bit-time-info .bit-timeLine .thid .top .t {
+    font-weight: 700;
+    font-size: 35px;
+    text-transform: capitalize;
+    margin-bottom: 20px
+}
+
+.bit-road .bit-time-info .bit-timeLine .fit .top .tip,
+.bit-road .bit-time-info .bit-timeLine .thid .top .tip {
+    text-transform: capitalize;
+    color: #fff;
+    font-weight: 700;
+    margin-bottom: 25px
+}
+
+.bit-road .bit-time-info .bit-timeLine .fit .top .tool,
+.bit-road .bit-time-info .bit-timeLine .thid .top .tool {
+    cursor: pointer;
+    width: 168px;
+    height: 48px;
+    line-height: 48px;
+    font-size: 14px;
+    text-align: center;
+    background: rgba(255, 255, 255, .1);
+    border: 1px solid #A5E140;
+    border-radius: 42px;
+    text-transform: capitalize;
+    font-weight: 700;
+    margin-bottom: 40px
+}
+
+.bit-road .bit-time-info .bit-timeLine .fit .top .tool:hover,
+.bit-road .bit-time-info .bit-timeLine .thid .top .tool:hover {
+    background: linear-gradient(90deg, #CEFF65 0%, #A1F617 93.58%);
+    color: #000
+}
+
+.bit-road .bit-time-info .bit-timeLine .fit .bottom,
+.bit-road .bit-time-info .bit-timeLine .thid .bottom {
+    line-height: 32px;
+    font-size: 18px
+}
+
+.bit-road .bit-time-info .bit-timeLine .sec {
+    background: #010D50;
+    border-radius: 40px;
+    padding: 50px 40px;
+    margin-bottom: 40px
+}
+
+.bit-road .bit-time-info .bit-timeLine .sec .top .t {
+    font-weight: 700;
+    font-size: 35px;
+    text-transform: capitalize;
+    margin-bottom: 20px
+}
+
+.bit-road .bit-time-info .bit-timeLine .sec .top .tip {
+    text-transform: capitalize;
+    color: #fff;
+    font-weight: 700;
+    margin-top: 25px
+}
+
+.bit-road .bit-time-info .bit-timeLine .sec .top .tool {
+    cursor: pointer;
+    width: 168px;
+    height: 48px;
+    line-height: 48px;
+    font-size: 14px;
+    text-align: center;
+    background: rgba(255, 255, 255, .1);
+    border: 1px solid #A5E140;
+    border-radius: 42px;
+    text-transform: capitalize;
+    font-weight: 700;
+    margin-bottom: 40px;
+    margin-top: 20px
+}
+
+.bit-road .bit-time-info .bit-timeLine .sec .top .tool:hover {
+    background: linear-gradient(90deg, #CEFF65 0%, #A1F617 93.58%);
+    color: #000
+}
+
+.bit-road .bit-time-info .bit-timeLine .sec .bottom {
+    line-height: 32px
+}
+
+.bit-road .bit-time-info .bit-timeLine .timeBg {
+    position: relative
+}
+
+.bit-road .bit-time-info .bit-timeLine .timeBg .bg {
+    position: absolute;
+    right: -30%;
+    width: 85%;
+    height: 400px;
+    background: #0328ee;
+    mix-blend-mode: lighten;
+    opacity: .7;
+    filter: blur(245px);
+    bottom: 6%
+}
+
+.bit-road .bit-time-info .bit-timeLine .timeBg img {
+    max-width: 100%
+}
+
+@media screen and (max-width: 1000px) {
+    .bit-road {
+        margin-bottom: 60px;
+        width: 100%
+    }
+
+    .bit-road .tit {
+        font-size: 30px;
+        height: 40px;
+        line-height: 40px;
+        margin: 0 auto
+    }
+
+    .bit-road .tips {
+        font-size: 14px;
+        line-height: 32px;
+        margin-bottom: 0
+    }
+
+    .bit-road .bit-time-info {
+        display: block
+    }
+
+    .bit-road .bit-time-info .bit-timeLine {
+        text-align: left;
+        height: auto;
+        padding: 0
+    }
+
+    .bit-road .bit-time-info .bit-timeLine .fit,
+    .bit-road .bit-time-info .bit-timeLine .thid {
+        margin: 20px 0;
+        float: none;
+        padding: 30px 20px
+    }
+
+    .bit-road .bit-time-info .bit-timeLine .fit .top,
+    .bit-road .bit-time-info .bit-timeLine .thid .top {
+        text-align: left
+    }
+
+    .bit-road .bit-time-info .bit-timeLine .fit .top .t,
+    .bit-road .bit-time-info .bit-timeLine .thid .top .t {
+        font-weight: 700;
+        font-size: 25px;
+        text-transform: capitalize;
+        margin-bottom: 20px
+    }
+
+    .bit-road .bit-time-info .bit-timeLine .fit .top .tip,
+    .bit-road .bit-time-info .bit-timeLine .thid .top .tip {
+        text-transform: capitalize;
+        color: #a4a4b5;
+        font-weight: 400;
+        margin-bottom: 20px
+    }
+
+    .bit-road .bit-time-info .bit-timeLine .fit .top .tool,
+    .bit-road .bit-time-info .bit-timeLine .thid .top .tool {
+        cursor: pointer;
+        width: 40%;
+        height: 35px;
+        line-height: 35px;
+        font-size: 14px;
+        margin: 0 auto 40px
+    }
+
+    .bit-road .bit-time-info .bit-timeLine .fit .top .tool:hover,
+    .bit-road .bit-time-info .bit-timeLine .thid .top .tool:hover {
+        background: linear-gradient(90deg, #CEFF65 0%, #A1F617 93.58%);
+        color: #000
+    }
+
+    .bit-road .bit-time-info .bit-timeLine .fit .bottom,
+    .bit-road .bit-time-info .bit-timeLine .thid .bottom {
+        text-align: left;
+        font-size: 15px
+    }
+
+    .bit-road .bit-time-info .bit-timeLine .sec {
+        margin: 20px 0 0;
+        float: none;
+        padding: 30px 20px
+    }
+
+    .bit-road .bit-time-info .bit-timeLine .sec .top .t {
+        font-weight: 700;
+        font-size: 25px;
+        text-transform: capitalize;
+        margin-bottom: 20px
+    }
+
+    .bit-road .bit-time-info .bit-timeLine .sec .bottom {
+        text-align: left;
+        font-size: 15px
+    }
+
+    .bit-road .bit-time-info .bit-timeLine .timeBg {
+        display: none
+    }
+}
+
+.bit-question {
+    margin: 0 auto 60px;
+    width: 1200px
+}
+
+.bit-question .hed.pc {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 38px;
+    line-height: 42px
+}
+
+.bit-question .hed.pc span {
+    color: #85fd01;
+    margin: 0 10px
+}
+
+.bit-question .hed.phone {
+    display: none
+}
+
+.bit-question .content {
+    justify-content: space-between;
+    margin-top: 55px
+}
+
+.bit-question .content .lft {
+    flex: 1
+}
+
+.bit-question .content .lft .arco-collapse-item {
+    border-bottom: 0;
+    margin-bottom: 20px
+}
+
+.bit-question .content .lft .arco-collapse-item .arco-collapse-item-header {
+    background: inherit;
+    height: 100px;
+    border: none;
+    border-bottom: 1px solid #343951
+}
+
+.bit-question .content .lft .arco-collapse-item .arco-collapse-item-header .arco-collapse-item-header-title {
+    text-transform: capitalize;
+    color: #fff;
+    font-weight: 700;
+    font-size: 19px
+}
+
+.bit-question .content .lft .arco-collapse-item .arco-collapse-item-header .arco-collapse-item-icon-hover {
+    padding: 10px;
+    border-radius: 35px;
+    color: #fff;
+    font-size: 25px
+}
+
+.bit-question .content .lft .arco-collapse-item .arco-collapse-item-header .arco-collapse-item-icon-hover .arco-collapse-item-expand-icon {
+    font-size: 28px;
+    color: #000
+}
+
+.bit-question .content .lft .arco-collapse-item .arco-collapse-item-content {
+    font-size: 14px;
+    line-height: 32px;
+    text-transform: capitalize;
+    color: #fff;
+    background: inherit;
+    border-bottom-left-radius: 6px;
+    border-bottom-right-radius: 6px
+}
+
+.bit-question .content .lft .arco-collapse-item.arco-collapse-item-active {
+    background: inherit;
+    border-radius: 6px;
+    border: 1px solid rgba(89, 95, 93, .1001)
+}
+
+.bit-question .content .lft .arco-collapse-item.arco-collapse-item-active .arco-collapse-item-header {
+    border-color: transparent
+}
+
+.bit-question .content .rit {
+    flex: 1
+}
+
+.bit-question .content .rit .arco-collapse-item {
+    border-bottom: 0;
+    margin-bottom: 20px
+}
+
+.bit-question .content .rit .arco-collapse-item .arco-collapse-item-header {
+    background: inherit;
+    height: 100px;
+    border: none;
+    border-bottom: 1px solid #343951
+}
+
+.bit-question .content .rit .arco-collapse-item .arco-collapse-item-header .arco-collapse-item-header-title {
+    text-transform: capitalize;
+    color: #fff;
+    font-weight: 700;
+    font-size: 19px
+}
+
+.bit-question .content .rit .arco-collapse-item .arco-collapse-item-header .arco-collapse-item-icon-hover {
+    padding: 10px;
+    border-radius: 35px;
+    color: #fff;
+    font-size: 25px
+}
+
+.bit-question .content .rit .arco-collapse-item .arco-collapse-item-header .arco-collapse-item-icon-hover .arco-collapse-item-expand-icon {
+    font-size: 28px;
+    color: #000
+}
+
+.bit-question .content .rit .arco-collapse-item .arco-collapse-item-content {
+    font-size: 14px;
+    line-height: 32px;
+    text-transform: capitalize;
+    color: #fff;
+    background: inherit;
+    border-bottom-left-radius: 6px;
+    border-bottom-right-radius: 6px
+}
+
+.bit-question .content .rit .arco-collapse-item.arco-collapse-item-active {
+    background: inherit;
+    border-radius: 6px;
+    border: 1px solid rgba(89, 95, 93, .1001)
+}
+
+.bit-question .content .rit .arco-collapse-item.arco-collapse-item-active .arco-collapse-item-header {
+    border-color: transparent
+}
+
+@media screen and (max-width: 1000px) {
+    .bit-question {
+        margin-bottom: 60px;
+        width: 100%
+    }
+
+    .bit-question .hed.phone {
+        text-align: center;
+        display: block;
+        justify-content: center;
+        align-items: center;
+        font-size: 30px;
+        font-weight: 700;
+        line-height: 42px
+    }
+
+    .bit-question .hed.phone span {
+        color: #85fd01;
+        margin: 0 10px
+    }
+
+    .bit-question .hed.phone img {
+        margin: 0 5px
+    }
+
+    .bit-question .hed.pc {
+        display: none
+    }
+
+    .bit-question .content {
+        display: block;
+        justify-content: space-between;
+        margin-top: 20px
+    }
+
+    .bit-question .content .lft .arco-collapse-item {
+        border-bottom: 0;
+        margin-bottom: 20px
+    }
+
+    .bit-question .content .lft .arco-collapse-item .arco-collapse-item-header {
+        height: 50px;
+        border: none;
+        border-bottom: 1px solid #343951
+    }
+
+    .bit-question .content .lft .arco-collapse-item .arco-collapse-item-header .arco-collapse-item-header-title {
+        font-size: 15px
+    }
+
+    .bit-question .content .lft .arco-collapse-item .arco-collapse-item-header .arco-collapse-item-icon-hover {
+        padding: 4px;
+        border-radius: 35px
+    }
+
+    .bit-question .content .lft .arco-collapse-item .arco-collapse-item-header .arco-collapse-item-icon-hover .arco-collapse-item-expand-icon {
+        font-size: 20px;
+        color: #000
+    }
+
+    .bit-question .content .lft .arco-collapse-item .arco-collapse-item-content {
+        font-size: 14px;
+        line-height: 32px;
+        text-transform: capitalize;
+        color: #fff
+    }
+
+    .bit-question .content .lft .arco-collapse-item.arco-collapse-item-active {
+        border: none;
+        border-bottom: 1px solid #343951
+    }
+
+    .bit-question .content .lft .arco-collapse-item.arco-collapse-item-active .arco-collapse-item-header {
+        border-color: transparent
+    }
+
+    .bit-question .content .rit .arco-collapse-item {
+        border-bottom: 0;
+        margin-bottom: 20px
+    }
+
+    .bit-question .content .rit .arco-collapse-item .arco-collapse-item-header {
+        border: none;
+        border-bottom: 1px solid #343951;
+        height: 50px
+    }
+
+    .bit-question .content .rit .arco-collapse-item .arco-collapse-item-header .arco-collapse-item-header-title {
+        text-transform: capitalize;
+        color: #fff;
+        font-weight: 700;
+        font-size: 14px
+    }
+
+    .bit-question .content .rit .arco-collapse-item .arco-collapse-item-header .arco-collapse-item-icon-hover {
+        padding: 4px;
+        border-radius: 35px
+    }
+
+    .bit-question .content .rit .arco-collapse-item .arco-collapse-item-header .arco-collapse-item-icon-hover .arco-collapse-item-expand-icon {
+        font-size: 20px;
+        color: #000
+    }
+
+    .bit-question .content .rit .arco-collapse-item .arco-collapse-item-content {
+        font-size: 14px;
+        line-height: 32px;
+        text-transform: capitalize;
+        color: #fff
+    }
+
+    .bit-question .content .rit .arco-collapse-item.arco-collapse-item-active {
+        border: none;
+        border-bottom: 1px solid #343951
+    }
+
+    .bit-question .content .rit .arco-collapse-item.arco-collapse-item-active .arco-collapse-item-header {
+        border-color: transparent
+    }
+}
+
+.bit-team {
+    margin: 90px auto 0;
+    width: 1200px
+}
+
+.bit-team .tit {
+    display: flex;
+    justify-content: flex-start;
+    font-weight: 700;
+    align-items: center;
+    height: 61px;
+    border-radius: 40px;
+    font-size: 38px;
+    margin-bottom: 10px
+}
+
+.bit-team .tit-des {
+    font-size: 18px;
+    line-height: 32px;
+    margin-bottom: 70px
+}
+
+.bit-team .bit-lit {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    column-gap: 2%
+}
+
+.bit-team .bit-lit .list-box {
+    text-align: center;
+    background: #010D50;
+    border-radius: 39.2654px;
+    padding: 20px 3px
+}
+
+.bit-team .bit-lit .list-box .banner {
+    display: none
+}
+
+.bit-team .bit-lit .list-box .banner img {
+    margin: 0 auto
+}
+
+.bit-team .bit-lit .list-box .avater img {
+    width: 90%;
+    border-radius: 20px
+}
+
+.bit-team .bit-lit .list-box .name {
+    margin: 20px 0 35px;
+    font-weight: 700;
+    font-size: 20px
+}
+
+.bit-team .bit-lit .list-box .txt {
+    color: #a4a4b5;
+    margin-bottom: 10px
+}
+
+@media screen and (max-width: 1000px) {
+    .bit-team {
+        width: 100%;
+        margin-top: 60px
+    }
+
+    .bit-team .tit {
+        justify-content: left;
+        padding: 0;
+        align-items: center;
+        width: 100%;
+        height: 40px;
+        font-size: 30px;
+        margin: 0 auto
+    }
+
+    .bit-team .tit-des {
+        font-size: 18px;
+        line-height: 32px;
+        margin-bottom: 30px
+    }
+
+    .bit-team .bit-lit {
+        margin-bottom: 50px;
+        grid-template-columns: 1fr
+    }
+
+    .bit-team .bit-lit .list-box {
+        margin-bottom: 20px
+    }
+
+    .bit-team .bit-lit .list-box .banner img {
+        margin: 0 auto
+    }
+
+    .bit-team .bit-lit .list-box .name {
+        margin: 20px 0 10px;
+        font-size: 25px;
+        text-align: left;
+        padding: 0 20px
+    }
+
+    .bit-team .bit-lit .list-box .txt {
+        color: #fff;
+        margin-bottom: 10px;
+        text-align: left;
+        padding: 0 20px
+    }
+}
+
+.bit-home {
+    display: flex;
+    flex-direction: column
+}
+
+.bit-home .banner {
+    display: flex;
+    margin: 30px auto 0;
+    width: 1200px
+}
+
+.bit-home .banner .left {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    padding-right: 5%;
+    justify-content: center
+}
+
+.bit-home .banner .left .title {
+    font-style: normal;
+    font-weight: 800;
+    font-size: 66px;
+    line-height: 80px;
+    text-align: justify
+}
+
+.bit-home .banner .left .sub-title {
+    margin-top: 10px;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 22px;
+    line-height: 32px;
+    text-align: justify;
+    text-transform: capitalize;
+    color: #fff
+}
+
+.bit-home .banner .left .btn {
+    margin-top: 50px;
+    display: flex;
+    justify-content: center
+}
+
+.bit-home .banner .left .btn .bit-btn {
+    width: 230px;
+    height: 70px;
+    line-height: 70px;
+    letter-spacing: 1.6px;
+    text-align: center;
+    background: #0328EE;
+    border-radius: 55px;
+    text-transform: uppercase;
+    font-style: normal;
+    font-size: 16px;
+    cursor: pointer;
+    color: #fff
+}
+
+.bit-home .banner .left .contract-list {
+    margin-top: 46px;
+    display: flex;
+    justify-content: center;
+    gap: 40px
+}
+
+.bit-home .banner .left .contract-list .item {
+    display: flex;
+    width: 75px;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center
+}
+
+.bit-home .banner .left .contract-list .item img {
+    width: 100%;
+    height: 100%
+}
+
+.bit-home .banner .left .contract-list .item span {
+    font-family: Inter;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 17px;
+    text-transform: uppercase;
+    color: #a2f618;
+    margin-top: 10px
+}
+
+.bit-home .banner .right {
+    flex: 1;
+    height: 100%
+}
+
+.bit-home .banner .right video {
+    width: 100%
+}
+
+@media screen and (max-width: 1000px) {
+    .bit-home .banner {
+        flex-direction: column;
+        width: 100%
+    }
+
+    .bit-home .banner .left {
+        margin-top: 20px;
+        margin-bottom: 20px;
+        width: auto;
+        padding: 0 20px
+    }
+
+    .bit-home .banner .left .title {
+        font-size: 30px;
+        line-height: 38px
+    }
+
+    .bit-home .banner .left .sub-title {
+        font-size: 18px;
+        line-height: 20px
+    }
+
+    .bit-home .banner .left .btn .bit-btn {
+        height: 60px;
+        line-height: 60px
+    }
+
+    .bit-home .banner .left .contract-list {
+        gap: 20px
+    }
+
+    .bit-home .banner .left .contract-list .item {
+        gap: 5px
+    }
+
+    .bit-home .banner .left .contract-list .item span {
+        font-size: 12px
+    }
+
+    .bit-home .banner .right {
+        width: 100%
+    }
+}
