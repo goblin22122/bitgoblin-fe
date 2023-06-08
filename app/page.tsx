@@ -142,8 +142,9 @@ export default function Home() {
               </div>
               <div className="bit-buoy-mobile" data-v-c7418f94="">
                 <div className="buoy-list">
-                  <div className="buoy-item" style={{ width: "10%" }} as="button" onClick={connect} >
-                    <div className="btn">{address == "0" ? "Connect Wallet" : address}</div>
+                  <div className="buoy-item" style={{ width: "10%" }} role="button" onClick={connect} >
+                    <div className="btn">{address == "0" ? "Connect Wallet" : address}
+                    </div>
                   </div>
                 </div>
               </div>
