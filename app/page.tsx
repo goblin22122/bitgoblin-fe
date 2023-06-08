@@ -55,7 +55,7 @@ export default function Home() {
     if (typeof (window as any).ethereum == "undefined") {
       alert("Please install MetaMask wallet!");
     }
-
+    //@ts-ignore
     await ethereum.request({ method: "eth_requestAccounts" })
     const _provider = new ethers.providers.Web3Provider((window as any).ethereum);
     const chainInfo = await _provider.getNetwork();
