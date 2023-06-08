@@ -52,12 +52,12 @@ export default function Home() {
 
 
   async function connect() {
-    if (typeof window.ethereum == "undefined") {
+    if (typeof (window as any).ethereum == "undefined") {
       alert("Please install MetaMask wallet!");
     }
 
     await ethereum.request({ method: "eth_requestAccounts" })
-    const _provider = new ethers.providers.Web3Provider(window.ethereum);
+    const _provider = new ethers.providers.Web3Provider((window as any).ethereum);
     const chainInfo = await _provider.getNetwork();
     if (chainInfo["chainId"] != 56) {
       await changeNetwork();
