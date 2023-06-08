@@ -12,7 +12,7 @@ export default function MainPage() {
                             </div>
                             <div className="sub-title"> And Decentralised Smart Contracts And Earn 1.8%~2.8% Daily
                                 Passive Income! </div>
-                            <div className="btn"><a href="https://www.bitgoblin.finance/#/dashboard" className="">
+                            <div className="btn"><a href="https://www.bitgoblin.io#/dashboard" className="">
                                 <div className="bit-btn">Open the Dapp</div>
                             </a></div>
                             <div className="contract-list"></div>

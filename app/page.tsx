@@ -83,7 +83,7 @@ export default function Home() {
 
             <div className="bit-header" data-v-c7418f94="">
               <div className="header-logo" data-v-c7418f94=""><a aria-current="page"
-                href="https://www.bitgoblin.finance/#/" className="router-link-active router-link-exact-active"
+                href="https://www.bitgoblin.io/#/" className="router-link-active router-link-exact-active"
                 data-v-c7418f94=""><img src="logo.svg" style={{ width: "120 %", height: "200%" }} /></a></div>
               <div className="bit-menu" data-v-c7418f94="">
                 <div className="arco-menu arco-menu-light arco-menu-horizontal pc-menu">
@@ -100,10 +100,10 @@ export default function Home() {
                       </div>
                       <div className="arco-menu-item">
                         <a aria-current="page"
-                          href="https://www.bitgoblin.finance/#/"
+                          href="https://www.bitgoblin.io/#/"
                           className="router-link-active router-link-exact-active">Home</a></div>
                       <div className="arco-menu-item">
-                        <a href="https://www.bitgoblin.finance/#/dashboard"
+                        <a href="https://www.bitgoblin.io/#/dashboard"
                           className="">Dashboard
                         </a>
                       </div>
@@ -156,13 +156,13 @@ export default function Home() {
                 <div className="left" data-v-c7418f94=""><img src="logo.svg" data-v-c7418f94="" />
                   <div className="menu" data-v-c7418f94="">
                     <div className="menu-list" data-v-c7418f94=""><a aria-current="page"
-                      href="https://www.bitgoblin.finance/#/"
+                      href="https://www.bitgoblin.io/#/"
                       className="router-link-active router-link-exact-active" data-v-c7418f94="">
                       <div className="item" data-v-c7418f94="">HOME</div>
                     </a><a href="https://t.me/BitGoblinOfficialCommunity" target="_blank"
                       data-v-c7418f94="">
                         <div className="item" data-v-c7418f94="">TELEGRAM</div>
-                      </a><a href="https://www.bitgoblin.finance/#/dashboard" className="" data-v-c7418f94="">
+                      </a><a href="https://www.bitgoblin.io/#/dashboard" className="" data-v-c7418f94="">
                         <div className="item" data-v-c7418f94="">Dashboard</div>
                       </a><a href="https://twitter.com/bitforgedefi" target="_blank" data-v-c7418f94="">
                         <div className="item" data-v-c7418f94="">twitter</div>
