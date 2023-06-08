@@ -7,7 +7,9 @@ export default function MainPage() {
                 <div className="bit-home" data-v-c7418f94="">
                     <div className="banner">
                         <div className="left">
-                            <div className="title"> Join the World of Bitcoin Mining! </div>
+                            <div className="title" style={{ fontSize: "60px", textAlign: "left" }}>
+                                Join the World of Decentralized Finance!
+                            </div>
                             <div className="sub-title"> And Decentralised Smart Contracts And Earn 1.8%~2.8% Daily
                                 Passive Income! </div>
                             <div className="btn"><a href="https://www.bitgoblin.finance/#/dashboard" className="">

