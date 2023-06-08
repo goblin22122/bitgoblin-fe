@@ -22,7 +22,7 @@ export default function MainPage() {
                     <div className="bit-started">
                         <div className="title"><span>How to Get Started?</span></div>
                         <div className="title-des"><span>A detailed process to start making your profits today
-                            with</span><span style={{ color: "#85FD01" }}> bitgoblin.finance</span></div>
+                            with</span><span style={{ color: "#85FD01" }}> BitGoblin.io</span></div>
                         <div className="content">
                             <div className="list">
                                 <div className="item">
@@ -85,7 +85,7 @@ export default function MainPage() {
             </div>
             <div className="bit-road">
                 <div className="tit"><span>Roadmap &amp; Milestones</span></div>
-                <div className="tips"> When, how &amp; why we built <span style={{ color: "#A2F005" }}>BitGoblin.finance?</span></div>
+                <div className="tips"> When, how &amp; why we built <span style={{ color: "#A2F005" }}>BitGoblin.io?</span></div>
                 <div className="bit-time-info">
                     <div className="bit-timeLine">
                         <div className="fit">

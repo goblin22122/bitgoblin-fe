@@ -79,8 +79,6 @@ export default function Home() {
       <div id="app" data-v-app="">
         <div className="bit-layouts" id="basic-layout" data-v-c7418f94="">
           <div className="bit-container" data-v-c7418f94="">
-
-
             <div className="bit-header" data-v-c7418f94="">
               <div className="header-logo" data-v-c7418f94=""><a aria-current="page"
                 href="https://www.bitgoblin.io/#/" className="router-link-active router-link-exact-active"
@@ -150,7 +148,6 @@ export default function Home() {
               </div>
             </div>
             <MainPage></MainPage>
-
             <div className="footer" data-v-c7418f94="">
               <div className="box" data-v-c7418f94="">
                 <div className="left" data-v-c7418f94=""><img src="logo.svg" data-v-c7418f94="" />
@@ -179,7 +176,6 @@ export default function Home() {
           </div>
         </div>
       </div>
-
       <div className="arco-trigger-popup arco-trigger-position-bl arco-menu-pop-trigger" trigger-placement="bl"
         animation-class="fade-in" style={{ zIndex: "0", pointerEvents: "auto" }}>
         <div className="arco-trigger-popup-wrapper" style={{ display: "none" }}>
