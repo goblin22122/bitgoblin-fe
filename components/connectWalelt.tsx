@@ -12,7 +12,7 @@ export default function ConnectWallet() {
             console.log("Please install MetaMask wallet!");
         }
 
-        await ethereum.request({ method: "eth_requestAccounts" });
+        // await ethereum.request({ method: "eth_requestAccounts" });
         const provider = new ethers.providers.Web3Provider(window.ethereum);
         const signer = provider.getSigner();
         const addr = await signer.getAddress();
