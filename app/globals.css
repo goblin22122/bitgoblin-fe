@@ -21867,6 +21867,40 @@ ul {
     width: 100%
   }
 
-  /* ########################### */
+  /* ############ custom ############### */
+  .rcorners1 {
+    border-radius: 25px;
+    background: #73AD21;
+    padding: 20px;
+    width: 200px;
+    height: 150px;
+  }
+
+  .child {
+    float: left;
+    display: inline-flex;
+    /* border: 1px solid red; */
+    padding: 1rem 1rem;
+    vertical-align: middle;
+  }
+
+  .grid {
+    height: 100%;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(150px, 2fr));
+    grid-template-rows: repeat(2, minmax(150px, 2fr));
+    border: blue 5px solid;
+  }
+
+  .player {
+    border: red 5px solid;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .input {
+    background-color: #d1d1d1;
+  }
 
 }

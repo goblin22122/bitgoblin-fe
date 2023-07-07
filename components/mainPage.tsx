@@ -1,18 +1,20 @@
+
 import Image from 'next/image';
 
-export default function MainPage() {
+export function MainPage() {
     return (
         <div>
             <div className="bit-main" data-v-c7418f94="" style={{ marginBottom: "100px" }}>
                 <div className="bit-home" data-v-c7418f94="">
                     <div className="banner">
                         <div className="left">
-                            <div className="title" style={{ fontSize: "60px", textAlign: "left" }}>
+                            <div className="title" style={{ fontSize: "60px", textAlign: "left", lineHeight: "50px" }}>
                                 Join the World of Decentralized Finance!
                             </div>
-                            <div className="sub-title"> And Decentralised Smart Contracts And Earn 1.8%~2.8% Daily
-                                Passive Income! </div>
-                            <div className="btn"><a href="https://www.bitgoblin.io#/dashboard" className="">
+                            <div className="sub-title" style={{ lineHeight: "25px" }}>
+                                <span>And Decentralised Smart Contracts And Earn </span><span style={{ color: "#85FD01" }}>1.8%~2.8% </span><span>Passive Income Daily!</span>
+                            </div>
+                            <div className="btn"><a href="/staking" className="">
                                 <div className="bit-btn">Open the Dapp</div>
                             </a></div>
                             <div className="contract-list"></div>
