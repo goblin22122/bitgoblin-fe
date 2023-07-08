@@ -177,7 +177,7 @@ function CommissionComponent() {
                                                     <Box>
                                                         <Center bg='#46458C' >
                                                             <InputGroup>
-                                                                <InputLeftAddon children='Affiliate url' borderRadius={10} border="0.2em solid white" />
+                                                                <InputLeftAddon borderRadius={10} border="0.2em solid white" >{'Affiliate url'}</InputLeftAddon>
                                                                 <Input
                                                                     border="0.2em solid "
                                                                     borderLeft={0}
