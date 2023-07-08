@@ -115,7 +115,7 @@ export default function Home() {
                         <div className="item" data-v-c7418f94="">Telegram</div>
                       </a><a href="/staking" className="" data-v-c7418f94="">
                         <div className="item" data-v-c7418f94="">DAPP</div>
-                      </a><a href="https://twitter.com/bitforgedefi" target="_blank" data-v-c7418f94="">
+                      </a><a href="https://twitter.com" target="_blank" data-v-c7418f94="">
                         <div className="item" data-v-c7418f94="">Twitter</div>
                       </a><a href="https://bitgoblin.gitbook.io/whitepaper" target="_blank"
                         data-v-c7418f94="">
