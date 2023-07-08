@@ -145,10 +145,10 @@ export default function App() {
                             </div>
                         </div>
                         <CommissionComponenet></CommissionComponenet>
-                        <div className="footer" style={{ height: "5%" }} data-v-c7418f94="">
+                        {/* <div className="footer" style={{ height: "5%" }} data-v-c7418f94="">
                             <div className="dividers" data-v-c7418f94=""></div>
                             <div className="copyright" data-v-c7418f94=""> All rights reserved </div>
-                        </div>
+                        </div> */}
                     </div>
                 </div>
             </div>

@@ -80,7 +80,7 @@ function CommissionComponent() {
                                     <div className="des"> USDT on wallets on the Binance Smartchain network for staking
                                         on BitGoblin. </div>
                                 </div> */}
-                                <div className="item" style={{ height: "380px" }}>
+                                <div className="item" style={{ height: "400px" }}>
                                     <Box>
                                         <Box borderRadius={8} overflow="hidden">
                                             <Box>

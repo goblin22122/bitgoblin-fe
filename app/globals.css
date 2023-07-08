@@ -21904,6 +21904,8 @@ ul {
     background-color: #d1d1d1;
   }
 
+
+
   @media only screen and (max-width: 600px) {
     /* img#logo-mainpage {
       width: 75px;
@@ -21932,6 +21934,14 @@ ul {
       width: 70%;
     }
 
+
+  }
+
+  @media screen  {
+    div.footer {
+      /* position: fixed; */
+      bottom: 0px;
+    }
   }
 
 }
