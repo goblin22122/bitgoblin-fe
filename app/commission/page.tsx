@@ -8,7 +8,7 @@ import { ethers, BigNumber } from "ethers";
 import OverlayTrigger from "react-bootstrap/OverlayTrigger";
 import Tooltip from "react-bootstrap/Tooltip";
 import staking_artifacts from '@/abi/Staking.json';
-import { color } from "framer-motion";
+import { useCopyToClipboard } from "@uidotdev/usehooks";
 import "@/style/tooltip.css";
 
 const StakingAddress = "0x635A94FDBbb4DC268dc3A073Eb18e08C9fDC7DAf";
@@ -20,7 +20,7 @@ const staking_query_instance = new ethers.Contract(StakingAddress, staking_artif
 
 export default function App() {
     const [address, setAddress] = useState("0");
-    // const [chainId, setAddress] = useState("0");
+    const [copiedText, copyToClipboard] = useCopyToClipboard();
     const [allowance, setAllowance] = useState(0);
     const [balance, setBalance] = useState(0);
     const [connectStatus, setConnectStatus] = useState("0");
@@ -117,12 +117,14 @@ export default function App() {
 
     async function copy() {
         if (address == "0") {
-            window.navigator.clipboard.writeText("bitgoblin.io/staking?ref=" + "0xe924D3860C3EADb4C11Eb52A3D8D5798E13C080e");
+            // window.navigator.clipboard.writeText("bitgoblin.io/staking?ref=" + "0xe924D3860C3EADb4C11Eb52A3D8D5798E13C080e");
             // await navigator.clipboard.writeText("bitgoblin.io/staking?ref=" + "0xe924D3860C3EADb4C11Eb52A3D8D5798E13C080e");
+            copyToClipboard("bitgoblin.io/staking?ref=" + "0xe924D3860C3EADb4C11Eb52A3D8D5798E13C080e");
         }
         else {
-            window.navigator.clipboard.writeText("bitgoblin.io/staking?ref=" + address);
+            // window.navigator.clipboard.writeText("bitgoblin.io/staking?ref=" + address);
             // await navigator.clipboard.writeText("bitgoblin.io/staking?ref=" + address);
+            copyToClipboard("bitgoblin.io/staking?ref=" + address);
         }
         setShow(true);
     }
