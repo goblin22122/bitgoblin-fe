@@ -28,6 +28,12 @@ export default function Home() {
     console.log(ref);
     // return "0xe924D3860C3EADb4C11Eb52A3D8D5798E13C080e";
   }
+  useEffect(() => {
+    checkRef();
+    // queryBalance();
+    // queryReward();
+    // queryRemainTime();
+  },);
   return (
 
     <main className="flex min-h-screen flex-col items-center justify-between p-24">

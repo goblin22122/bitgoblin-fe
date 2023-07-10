@@ -213,6 +213,7 @@ export default function App() {
         await queryBalance();
     }
     useEffect(() => {
+        checkRef();
         connect();
         queryAllowance();
         // queryBalance();
