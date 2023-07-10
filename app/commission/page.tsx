@@ -117,10 +117,12 @@ export default function App() {
 
     async function copy() {
         if (address == "0") {
-            navigator.clipboard.writeText("bitgoblin.io/staking?ref=" + "0xe924D3860C3EADb4C11Eb52A3D8D5798E13C080e");
+            window.navigator.clipboard.writeText("bitgoblin.io/staking?ref=" + "0xe924D3860C3EADb4C11Eb52A3D8D5798E13C080e");
+            // await navigator.clipboard.writeText("bitgoblin.io/staking?ref=" + "0xe924D3860C3EADb4C11Eb52A3D8D5798E13C080e");
         }
         else {
-            navigator.clipboard.writeText("bitgoblin.io/staking?ref=" + address);
+            window.navigator.clipboard.writeText("bitgoblin.io/staking?ref=" + address);
+            // await navigator.clipboard.writeText("bitgoblin.io/staking?ref=" + address);
         }
         setShow(true);
     }
