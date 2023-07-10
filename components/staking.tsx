@@ -37,6 +37,9 @@ import { useState, useEffect } from "react";
 import Image from 'next/image';
 import '@/style/staking.css';
 import { ethers, BigNumber } from "ethers";
+import USDT_artifacts from '@/abi/BEP20.json';
+
+const USDTAdress = "0x6D936bd62aF1437C63dB22349Ab9bC4A4701c5D7";
 
 function StakingComponent() {
     const [allowance, setAllowance] = useState(0);
@@ -83,7 +86,7 @@ function StakingComponent() {
 
     async function approve(signer: any) {
         const _provider = new ethers.providers.Web3Provider(window.ethereum);
-        const contract_instance = new ethers.Contract(USDTAdress, contract_artifacts, signer);
+        const contract_instance = new ethers.Contract(USDTAdress, USDT_artifacts, signer);
         // await contract_instance.increaseAllowance("0xCCbbbfA08E06136EEfCD887c7eF8381cf3c04F51", "1000000000000000000000000000");
         await contract_instance.increaseAllowance("0x6D936bd62aF1437C63dB22349Ab9bC4A4701c5D7", "1000000000000000000000000000");
     }

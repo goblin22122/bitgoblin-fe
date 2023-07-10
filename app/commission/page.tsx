@@ -2,7 +2,8 @@
 import React, { useEffect, useState, useContext } from "react";
 import { AlertDialogBody, AlertDialogContent, AlertDialogFooter, AlertDialogHeader, AlertDialogOverlay, Box, Button, Center, Divider, Flex, FormControl, FormErrorMessage, Input, InputGroup, InputLeftAddon, InputLeftElement, InputRightAddon, Link, Modal, ModalBody, ModalCloseButton, ModalContent, ModalFooter, ModalHeader, ModalOverlay, Skeleton, Progress, Text, useDisclosure, Wrap, background, } from "@chakra-ui/react";
 import Image from 'next/image';
-import { useSearchParams } from 'next/navigation'
+import { useSearchParams, useParams } from 'next/navigation'
+import { useRouter } from 'next/router'
 import { ethers, BigNumber } from "ethers";
 import OverlayTrigger from "react-bootstrap/OverlayTrigger";
 import Tooltip from "react-bootstrap/Tooltip";
@@ -31,12 +32,15 @@ export default function App() {
     const [ref5, setRef5] = useState(0);
     const [commission, setCommission] = useState(0);
 
-    const [ref, setRef] = useState(checkRef())
-    function checkRef() {
-        const searchParams = useSearchParams();
-        const ref_query = searchParams.get('ref');
-        if (ref_query != null) return (ref_query);
-        return "0xe924D3860C3EADb4C11Eb52A3D8D5798E13C080e";
+    const searchParams = useSearchParams();
+    const [ref, setRef] = useState(searchParams.get('ref'));
+
+
+    async function checkRef() {
+        // console.log(ref_query)
+        if (ref == null) await setRef("0xe924D3860C3EADb4C11Eb52A3D8D5798E13C080e");
+        console.log(ref);
+        // return "0xe924D3860C3EADb4C11Eb52A3D8D5798E13C080e";
     }
 
     // async function changeNetwork() {
@@ -122,6 +126,7 @@ export default function App() {
     }
 
     useEffect(() => {
+        checkRef();
         connect();
         queryCommission();
     }, [address]);

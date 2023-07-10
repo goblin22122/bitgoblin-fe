@@ -30,7 +30,8 @@ export default function App() {
     const [allowance, setAllowance] = useState(0);
     const [balance, setBalance] = useState(0);
     const [connectStatus, setConnectStatus] = useState("0");
-    const [ref, setRef] = useState(checkRef())
+    const searchParams = useSearchParams();
+    const [ref, setRef] = useState(searchParams.get('ref'));
 
     const [balance0, setBalance0] = useState(0);
     const [balance1, setBalance1] = useState(0);
@@ -98,12 +99,14 @@ export default function App() {
         });
     }
 
-    function checkRef() {
-        const searchParams = useSearchParams();
-        const ref_query = searchParams.get('ref');
-        if (ref_query != null) return (ref_query);
-        return "0xe924D3860C3EADb4C11Eb52A3D8D5798E13C080e";
+
+    async function checkRef() {
+        // console.log(ref_query)
+        if (ref == null) await setRef("0xe924D3860C3EADb4C11Eb52A3D8D5798E13C080e");
+        console.log(ref);
+        // return "0xe924D3860C3EADb4C11Eb52A3D8D5798E13C080e";
     }
+
 
     async function approve(signer: any) {
         const _provider = new ethers.providers.Web3Provider(window.ethereum);

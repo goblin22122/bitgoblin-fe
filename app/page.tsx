@@ -17,13 +17,16 @@ import { MainPage } from '@/components/mainPage';
 
 
 export default function Home() {
-  const [ref, setRef] = useState(checkRef())
-  function checkRef() {
-    const searchParams = useSearchParams();
-    const ref_query = searchParams.get('ref');
-    if (ref_query != null) return (ref_query);
-    return "0xe924D3860C3EADb4C11Eb52A3D8D5798E13C080e";
 
+  const searchParams = useSearchParams();
+  const [ref, setRef] = useState(searchParams.get('ref'));
+
+
+  async function checkRef() {
+    // console.log(ref_query)
+    if (ref == null) await setRef("0xe924D3860C3EADb4C11Eb52A3D8D5798E13C080e");
+    console.log(ref);
+    // return "0xe924D3860C3EADb4C11Eb52A3D8D5798E13C080e";
   }
   return (
 
