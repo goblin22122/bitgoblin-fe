@@ -8,7 +8,8 @@ import { ethers, BigNumber } from "ethers";
 import OverlayTrigger from "react-bootstrap/OverlayTrigger";
 import Tooltip from "react-bootstrap/Tooltip";
 import staking_artifacts from '@/abi/Staking.json';
-import { useCopyToClipboard } from "@uidotdev/usehooks";
+// import { useCopyToClipboard } from "@uidotdev/usehooks";
+import copy from "copy-to-clipboard";
 import "@/style/tooltip.css";
 
 const StakingAddress = "0x635A94FDBbb4DC268dc3A073Eb18e08C9fDC7DAf";
@@ -20,7 +21,7 @@ const staking_query_instance = new ethers.Contract(StakingAddress, staking_artif
 
 export default function App() {
     const [address, setAddress] = useState("0");
-    const [copiedText, copyToClipboard] = useCopyToClipboard();
+    // const [copiedText, copyToClipboard] = useCopyToClipboard();
     const [allowance, setAllowance] = useState(0);
     const [balance, setBalance] = useState(0);
     const [connectStatus, setConnectStatus] = useState("0");
@@ -115,16 +116,16 @@ export default function App() {
         queryCommission();
     }
 
-    async function copy() {
+    async function copyRef() {
         if (address == "0") {
             // window.navigator.clipboard.writeText("bitgoblin.io/staking?ref=" + "0xe924D3860C3EADb4C11Eb52A3D8D5798E13C080e");
             // await navigator.clipboard.writeText("bitgoblin.io/staking?ref=" + "0xe924D3860C3EADb4C11Eb52A3D8D5798E13C080e");
-            copyToClipboard("bitgoblin.io/staking?ref=" + "0xe924D3860C3EADb4C11Eb52A3D8D5798E13C080e");
+            copy("bitgoblin.io/staking?ref=" + "0xe924D3860C3EADb4C11Eb52A3D8D5798E13C080e");
         }
         else {
             // window.navigator.clipboard.writeText("bitgoblin.io/staking?ref=" + address);
             // await navigator.clipboard.writeText("bitgoblin.io/staking?ref=" + address);
-            copyToClipboard("bitgoblin.io/staking?ref=" + address);
+            copy("bitgoblin.io/staking?ref=" + address);
         }
         setShow(true);
     }
@@ -350,7 +351,7 @@ export default function App() {
                                                                                 fontSize={20}
                                                                                 color="white"
                                                                                 fontWeight="bold"
-                                                                                onClick={copy}
+                                                                                onClick={copyRef}
                                                                                 onMouseLeave={handleOnMouseLeave}
                                                                             > {"Copy your referral link"} <span><i className="fa fa-copy"></i></span>
                                                                             </Button>
