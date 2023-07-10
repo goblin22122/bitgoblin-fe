@@ -16,6 +16,7 @@ export function MainPage() {
                             </div>
                             <div className="btn"><a href="/staking" className="">
                                 <div className="bit-btn">Open the Dapp</div>
+                                {/* <Image src="open.gif" width={239} height={68} alt="" unoptimized={true}></Image> */}
                             </a></div>
                             <div className="contract-list"></div>
                         </div>
@@ -42,7 +43,7 @@ export function MainPage() {
                                             src="data:image/png;base64,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"
                                             alt="" /></div>
                                     <div className="step">STEP 02</div>
-                                    <div className="des"> USDC on wallets on the Binance Smartchain network for mining
+                                    <div className="des"> USDT on wallets on the Binance Smartchain network for mining
                                         on BitGoblin. </div>
                                 </div>
                                 <div className="item">
@@ -102,7 +103,7 @@ export function MainPage() {
                             <div className="top">
                                 <div className="t">2023 Q2</div>
                             </div>
-                            <div className="bottom"> * Design protocol<br /> * Integrate with BSC
+                            <div className="bottom" style={{ fontSize: "18px" }}> * Design protocol<br /> * Integrate with BSC
                                 network<br /> * Design and develop web page<br /> * Private environment
                                 test.<br /> * Launch version 1.0. Supports Token Staking Mining on BSC
                                 network<br />
@@ -126,7 +127,7 @@ export function MainPage() {
                             <div className="top">
                                 <div className="t">2023 Q4</div>
                             </div>
-                            <div className="bottom"> * Feedback to BitGoblin users, airdrop CalcPowerNFT<br /> *
+                            <div className="bottom" style={{ fontSize: "18px" }}> * Feedback to BitGoblin users, airdrop CalcPowerNFT<br /> *
                                 Open Mining Plus Program for CalcPowerNFT Holders<br /> * Optimize BitGoblin
                                 Eco and bring and bring more partners<br /> * Host community activities such
                                 as AMA, giveaway etc.<br /></div>
@@ -135,7 +136,7 @@ export function MainPage() {
                             <div className="top">
                                 <div className="t">2024 Q1</div>
                             </div>
-                            <div className="bottom"> * CalcKeyNFT&amp;CalcPowerNFT launched on nft exchange<br />
+                            <div className="bottom"> * BitGoblinNFT launched on nft exchange<br />
                                 * Develop and launch BitGoblin's mobile client( IOS &amp; Android)<br /> *
                                 Expanding the Mining Farm<br /> * Support more blockchain networks such as
                                 Solana, Avalanche, etc. to increase diversity and accessibility.<br /></div>

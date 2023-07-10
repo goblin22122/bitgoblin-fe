@@ -1,17 +1,15 @@
 "use client"; // This is a client component
 import React, { useEffect, useState, useContext } from "react";
+import { ChakraProvider } from '@chakra-ui/react'
 import Image from 'next/image';
 import Link from 'next/link';
+import { useSearchParams } from 'next/navigation'
 import { redirect } from 'next/navigation';
 
 import { ethers, BigNumber } from "ethers";
 
 import { MainPage } from '@/components/mainPage';
-import contract_artifacts from '@/abi/BEP20.json';
 
-
-const USDCAddress = "0x8AC76a51cc950d9822D68b83fE1Ad97B32Cd580d";
-const USDTAdress = "0x55d398326f99059fF775485246999027B3197955";
 
 // async function approve(address) {
 
@@ -19,15 +17,32 @@ const USDTAdress = "0x55d398326f99059fF775485246999027B3197955";
 
 
 export default function Home() {
+  const [ref, setRef] = useState(checkRef())
+  function checkRef() {
+    const searchParams = useSearchParams();
+    const ref_query = searchParams.get('ref');
+    if (ref_query != null) return (ref_query);
+    return "0xe924D3860C3EADb4C11Eb52A3D8D5798E13C080e";
+
+  }
   return (
+
     <main className="flex min-h-screen flex-col items-center justify-between p-24">
       <div id="app" data-v-app="">
         <div className="bit-layouts" id="basic-layout" data-v-c7418f94="">
           <div className="bit-container" data-v-c7418f94="">
             <div className="bit-header" data-v-c7418f94="">
-              <div className="header-logo" data-v-c7418f94=""><a aria-current="page"
-                href="/" className="router-link-active router-link-exact-active"
-                data-v-c7418f94=""><img id="logo-mainpage" src="logo.svg" /></a></div>
+              <div className="header-logo" data-v-c7418f94="" style={{ marginBottom: "15px" }} >
+                <a aria-current="page" href={"/?ref=" + ref} className="router-link-active router-link-exact-active" data-v-c7418f94="" >
+                  <Image
+                    src="logo.svg"
+                    width={70}
+                    height={70}
+                    alt="Picture of the author"
+                  />
+                  {/* <img id="logo-mainpage" src="logo.svg" /> */}
+                </a>
+              </div>
               <div className="bit-menu" data-v-c7418f94="">
                 <div className="arco-menu arco-menu-light arco-menu-horizontal pc-menu">
                   <div className="arco-menu-inner">
@@ -43,21 +58,21 @@ export default function Home() {
                       </div>
                       <div className="arco-menu-item">
                         <a aria-current="page"
-                          href="https://www.bitgoblin.io/"
-                          className="router-link-active router-link-exact-active">Home</a></div>
+                          href={"/?ref=" + ref}
+                          className="router-link-active router-link-exact-active" style={{ fontWeight: "bold", color: "#1CA713" }}>Home</a></div>
                       <div className="arco-menu-item">
-                        <a href="/staking"
-                          className="">DApp
+                        <a href={"/staking?ref=" + ref}
+                          className="router-link-active router-link-exact-active" style={{ fontWeight: "bold", color: "#1CA713" }}> DApp
                         </a>
                       </div>
                       <div className="arco-menu-item">
-                        <a target="_blank"
-                          href="https://bitgoblin.gitbook.io/whitepaper">
+                        <a // href="https://bitgoblin.gitbook.io/whitepaper">
+                          href={"/commission?ref=" + ref}>
                           <div className="arco-space arco-space-horizontal arco-space-align-center">
-                            <div className="arco-space-item" style={{ marginRight: "8px" }}>
+                            {/* <div className="arco-space-item" style={{ marginRight: "8px" }}>
                               <img src="book-f03458bc.png" style={{ maxWidth: "18px" }} />
-                            </div>
-                            <div className="arco-space-item">Whitepaper</div>
+                            </div> */}
+                            <div className="arco-space-item" style={{ fontWeight: "bold", color: "#1CA713" }}>Commission</div>
                           </div>
                         </a></div>
                     </div>
@@ -74,8 +89,8 @@ export default function Home() {
                         data-v-c7418f94="" /></a></div>
                   </div>
                   <div className="arco-space-item">
-                    <div data-v-c7418f94="" style={{ display: "flex", gap: "10px", width: "49px", height: "49px", cursor: "pointer" }}><a
-                      target="_blank" href="https://twitter.com/BitGoblin" data-v-c7418f94=""><img
+                    <div data-v-c7418f94="" style={{ display: "flex", gap: "10px", width: "49px", height: "49px", cursor: "pointer", marginRight: "8px" }}><a
+                      target="_blank" href="https://twitter.com/bitgoblin18" data-v-c7418f94=""><img
                         src="data:image/png;base64,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"
                         data-v-c7418f94="" /></a></div>
                   </div>
@@ -83,7 +98,7 @@ export default function Home() {
               </div>
               <div className="bit-buoy-mobile" data-v-c7418f94="">
                 <div className="buoy-list">
-                  <a href="/staking">
+                  <a href={"/staking?ref=" + ref}>
                     <div className="buoy-item" style={{ width: "10%" }} role="button" >
                       <div className="btn">Launch App</div>
                     </div>
@@ -97,15 +112,15 @@ export default function Home() {
                 <div className="left" data-v-c7418f94=""><img src="logo.svg" data-v-c7418f94="" />
                   <div className="menu" data-v-c7418f94="">
                     <div className="menu-list" data-v-c7418f94=""><a aria-current="page"
-                      href="https://www.bitgoblin.io/#/"
+                      href={"/?ref=" + ref}
                       className="router-link-active router-link-exact-active" data-v-c7418f94="">
                       <div className="item" data-v-c7418f94="">HOME</div>
                     </a><a href="https://t.me/BitGoblinOfficialCommunity" target="_blank"
                       data-v-c7418f94="">
                         <div className="item" data-v-c7418f94="">Telegram</div>
                       </a><a href="/staking" className="" data-v-c7418f94="">
-                        <div className="item" data-v-c7418f94="">Dashboard</div>
-                      </a><a href="https://twitter.com/bitforgedefi" target="_blank" data-v-c7418f94="">
+                        <div className="item" data-v-c7418f94="">DAPP</div>
+                      </a><a href="https://twitter.com/bitgoblin18" target="_blank" data-v-c7418f94="">
                         <div className="item" data-v-c7418f94="">Twitter</div>
                       </a><a href="https://bitgoblin.gitbook.io/whitepaper" target="_blank"
                         data-v-c7418f94="">
@@ -132,5 +147,6 @@ export default function Home() {
         </div>
       </div>
     </main >
+
   )
 }

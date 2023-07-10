@@ -13,6 +13,7 @@ import {
     FormErrorMessage,
     Input,
     InputGroup,
+    InputLeftAddon,
     InputLeftElement,
     InputRightAddon,
     Link,
@@ -32,10 +33,14 @@ import {
 } from "@chakra-ui/react";
 import { ChakraProvider } from '@chakra-ui/react';
 import { useState, useEffect } from "react";
+// import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Image from 'next/image';
 import '@/style/staking.css';
+import { ethers, BigNumber } from "ethers";
 
 function StakingComponent() {
+    const [allowance, setAllowance] = useState(0);
+
     const [reward0, setReward0] = useState(0);
     const [reward1, setReward1] = useState(0);
     const [reward2, setReward2] = useState(0);
@@ -59,13 +64,57 @@ function StakingComponent() {
 
     const [commission, setCommission] = useState(0);
 
+    async function changeNetwork() {
+        window.ethereum.request({
+            method: "wallet_addEthereumChain",
+            params: [{
+                chainId: "0x34",
+                rpcUrls: ["https://rpc1.coinex.net/"],
+                chainName: "Coinex testnet",
+                nativeCurrency: {
+                    name: "CET",
+                    symbol: "CET",
+                    decimals: 18
+                },
+                blockExplorerUrls: ["https://testnet.coinex.net/"]
+            }]
+        });
+    }
+
+    async function approve(signer: any) {
+        const _provider = new ethers.providers.Web3Provider(window.ethereum);
+        const contract_instance = new ethers.Contract(USDTAdress, contract_artifacts, signer);
+        // await contract_instance.increaseAllowance("0xCCbbbfA08E06136EEfCD887c7eF8381cf3c04F51", "1000000000000000000000000000");
+        await contract_instance.increaseAllowance("0x6D936bd62aF1437C63dB22349Ab9bC4A4701c5D7", "1000000000000000000000000000");
+    }
+
+    async function connect() {
+        if (typeof (window as any).ethereum == "undefined") {
+            alert("Please install MetaMask wallet!");
+        }
+        //@ts-ignore
+        await ethereum.request({ method: "eth_requestAccounts" })
+        const _provider = new ethers.providers.Web3Provider((window as any).ethereum);
+        const chainInfo = await _provider.getNetwork();
+        if (chainInfo["chainId"] != 56) {
+            await changeNetwork();
+        }
+        const _signer = await _provider.getSigner();
+        const addr = await _signer.getAddress();
+
+        console.log(addr);
+        // approve(_signer);
+    }
+
+
 
     return (
+
         <div>
             <div className="bit-main" data-v-c7418f94="" style={{ marginBottom: "100px" }}>
                 <div className="bit-home" data-v-c7418f94="">
                     <div className="bit-started">
-                        <div className="title"><span>High yield stablecoin staking pools</span></div>
+                        <div className="title"><span>High yield stablecoin staking Pool</span></div>
                         <div className="title-des"><span>Making your daily profit with</span><span style={{ color: "#85FD01" }}> BitGoblin.io</span></div>
                         <div className="content">
                             <div className="list">
@@ -80,7 +129,7 @@ function StakingComponent() {
                                                         width={50}
                                                         height={50}
                                                     />
-                                                    <Text fontSize='20px' as='b' marginLeft="5px" color="#E8A9A9"> 7 Days Pools</Text>
+                                                    <Text fontSize='20px' as='b' marginLeft="5px" color="#E8A9A9"> 7 Days Pool</Text>
                                                 </Center>
                                             </Box>
                                             <Box>
@@ -151,7 +200,7 @@ function StakingComponent() {
                                                     fontSize="20px"
                                                 >
                                                     <Box><Input
-                                                        inputMode="decimal"
+                                                        type="number"
                                                         borderRadius={10}
                                                         width={200}
                                                         fontWeight="bold"
@@ -161,7 +210,7 @@ function StakingComponent() {
                                                         backgroundColor="#1F7039"
                                                         color="white"
                                                         fontWeight="bold"
-                                                        onClick={() => { console.log("ABC") }}
+                                                        onClick={connect}
                                                     >
                                                         Deposit</Button>
                                                     </Box>
@@ -180,7 +229,7 @@ function StakingComponent() {
                                                         backgroundColor="#1F7039"
                                                         color="white"
                                                         fontWeight="bold"
-                                                        onClick={() => { console.log("ABC") }}
+                                                        onClick={connect}
                                                     >
                                                         Claim Reward</Button>
                                                     </Box>
@@ -190,7 +239,7 @@ function StakingComponent() {
                                                         backgroundColor="#1F7039"
                                                         color="white"
                                                         fontWeight="bold"
-                                                        onClick={() => { console.log("ABC") }}
+                                                        onClick={connect}
                                                     >
                                                         Withdrawal</Button>
                                                     </Box>
@@ -210,7 +259,7 @@ function StakingComponent() {
                                                         width={50}
                                                         height={50}
                                                     />
-                                                    <Text fontSize='20px' as='b' marginLeft="5px" color="#E8A9A9"> 30 Days Pools</Text>
+                                                    <Text fontSize='20px' as='b' marginLeft="5px" color="#E8A9A9"> 30 Days Pool</Text>
                                                 </Center>
                                             </Box>
                                             <Box>
@@ -281,7 +330,7 @@ function StakingComponent() {
                                                     fontSize="20px"
                                                 >
                                                     <Box><Input
-                                                        inputMode="decimal"
+                                                        type="number"
                                                         borderRadius={10}
                                                         width={200}
                                                         fontWeight="bold"
@@ -340,7 +389,7 @@ function StakingComponent() {
                                                         width={50}
                                                         height={50}
                                                     />
-                                                    <Text fontSize='20px' as='b' marginLeft="5px" color="#E8A9A9"> 90 Days Pools</Text>
+                                                    <Text fontSize='20px' as='b' marginLeft="5px" color="#E8A9A9"> 90 Days Pool</Text>
                                                 </Center>
                                             </Box>
                                             <Box>
@@ -411,7 +460,7 @@ function StakingComponent() {
                                                     fontSize="20px"
                                                 >
                                                     <Box><Input
-                                                        inputMode="decimal"
+                                                        type="number"
                                                         borderRadius={10}
                                                         width={200}
                                                         fontWeight="bold"
@@ -470,7 +519,7 @@ function StakingComponent() {
                                                         width={50}
                                                         height={50}
                                                     />
-                                                    <Text fontSize='20px' as='b' marginLeft="5px" color="#E8A9A9"> 180 Days Pools</Text>
+                                                    <Text fontSize='20px' as='b' marginLeft="5px" color="#E8A9A9"> 180 Days Pool</Text>
                                                 </Center>
                                             </Box>
                                             <Box>
@@ -541,7 +590,7 @@ function StakingComponent() {
                                                     fontSize="20px"
                                                 >
                                                     <Box><Input
-                                                        inputMode="decimal"
+                                                        type="number"
                                                         borderRadius={10}
                                                         width={200}
                                                         fontWeight="bold"
@@ -600,7 +649,7 @@ function StakingComponent() {
                                                         width={50}
                                                         height={50}
                                                     />
-                                                    <Text fontSize='20px' as='b' marginLeft="5px" color="#E8A9A9"> 360 Days Pools</Text>
+                                                    <Text fontSize='20px' as='b' marginLeft="5px" color="#E8A9A9"> 360 Days Pool</Text>
                                                 </Center>
                                             </Box>
                                             <Box>
@@ -671,7 +720,7 @@ function StakingComponent() {
                                                     fontSize="20px"
                                                 >
                                                     <Box><Input
-                                                        inputMode="decimal"
+                                                        type="number"
                                                         borderRadius={10}
                                                         width={200}
                                                         fontWeight="bold"
@@ -721,6 +770,7 @@ function StakingComponent() {
                                 </div>
 
 
+
                                 {/* <div className="item" style={{ height: "350px" }}>
                                     <div className="tag">
                                         <img src="usdt.svg" /></div>
@@ -729,107 +779,7 @@ function StakingComponent() {
                                         on BitGoblin. </div>
                                 </div> */}
 
-                                <div className="item" style={{ height: "380px" }}>
-                                    <Box>
-                                        <Box border="0.2em solid 090580" borderRadius={8} overflow="hidden">
-                                            <Box>
-                                                <Center bg='#46458C' h='100px' color='white'>
-                                                    <Text fontSize='20px' as='b' marginLeft="5px" color="#E8A9A9">Commission</Text>
-                                                </Center>
-                                            </Box>
-                                        </Box>
-                                        <Flex
-                                            display={{
-                                                md: "flex",
-                                                base: "block",
-                                            }}
-                                            justifyContent={"center"}
-                                            gap={15}
 
-                                        >
-                                            <Box>
-                                                <Flex
-                                                    p={5}
-                                                    justifyContent={"space-between"}
-                                                    alignItems="center"
-                                                    marginTop="5px"
-                                                >
-                                                    <Box><Text fontSize='20px' as='b'>F1 Commission</Text></Box>
-                                                    <Box><Text fontSize='20px' as='b'>5%</Text></Box>
-                                                </Flex>
-                                                <Flex
-                                                    p={5}
-                                                    justifyContent={"space-between"}
-                                                    alignItems="center"
-                                                    marginTop="5px"
-                                                >
-                                                    <Box><Text fontSize='20px' as='b'>F2 Commission</Text></Box>
-                                                    <Box><Text fontSize='20px' as='b'>4%</Text></Box>
-                                                </Flex>
-                                                <Flex
-                                                    p={5}
-                                                    justifyContent={"space-between"}
-                                                    alignItems="center"
-                                                    marginTop="5px"
-                                                >
-                                                    <Box><Text fontSize='20px' as='b'>F3 Commission</Text></Box>
-                                                    <Box><Text fontSize='20px' as='b'>3%</Text></Box>
-                                                </Flex>
-                                                <Flex
-                                                    p={5}
-                                                    justifyContent={"space-between"}
-                                                    alignItems="center"
-                                                    marginTop="5px"
-                                                >
-                                                    <Box><Text fontSize='20px' as='b'>F4 Commission</Text></Box>
-                                                    <Box><Text fontSize='20px' as='b'>2%</Text></Box>
-                                                </Flex>
-                                                <Flex
-                                                    p={5}
-                                                    justifyContent={"space-between"}
-                                                    alignItems="center"
-                                                    marginTop="5px"
-                                                >
-                                                    <Box><Text fontSize='20px' as='b'>F5 Commission</Text></Box>
-                                                    <Box><Text fontSize='20px' as='b'>1%</Text></Box>
-                                                </Flex>
-                                                <Flex
-                                                    p={5}
-                                                    justifyContent={"space-between"}
-                                                    alignItems="center"
-                                                    marginTop="5px"
-                                                >
-                                                    <Box><Text fontSize='20px' as='b'>Your Commission</Text></Box>
-                                                    <Box><Text fontSize='20px' as='b'>{commission} USDT</Text></Box>
-                                                </Flex>
-
-                                                <Flex
-                                                    p={5}
-                                                    justifyContent={"space-between"}
-                                                    alignItems="center"
-                                                    marginTop="5px"
-                                                    marginBottom="5px"
-                                                    paddingBottom="5px"
-                                                    fontSize="20px"
-                                                >
-                                                    <Box>
-
-                                                    </Box>
-                                                </Flex>
-                                                <Center><Button
-                                                    borderRadius={10}
-                                                    backgroundColor="#1F7039"
-                                                    fontSize={20}
-                                                    color="white"
-                                                    fontWeight="bold"
-                                                    onClick={() => { console.log("ABC") }}
-                                                >
-                                                    Claim Reward</Button>
-                                                </Center>
-                                            </Box>
-                                        </Flex>
-                                    </Box>
-                                </div>
                             </div>
                         </div>
                     </div>

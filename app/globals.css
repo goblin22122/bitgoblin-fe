@@ -11542,7 +11542,7 @@ body[arco-theme=dark] .arco-carousel-indicator-outer .arco-carousel-indicator-it
 }
 
 .arco-menu-vertical .arco-menu-inner {
-  padding: 4px 8px
+  /* padding: 4px 8px */
 }
 
 .arco-menu-vertical .arco-menu-item.arco-menu-item-indented {
@@ -11595,7 +11595,7 @@ body[arco-theme=dark] .arco-carousel-indicator-outer .arco-carousel-indicator-it
 .arco-menu-horizontal .arco-menu-inner {
   display: flex;
   align-items: center;
-  padding: 14px 20px
+  padding: 14px 7px
 }
 
 .arco-menu-horizontal .arco-menu-item,
@@ -20256,7 +20256,7 @@ ul {
 .bit-buoy .buoy-list {
   display: flex;
   flex-direction: column;
-  gap: 20px
+  /* gap: 20px */
 }
 
 .bit-buoy .buoy-list .buoy-item {
@@ -20272,13 +20272,14 @@ ul {
 
 .bit-buoy-mobile {
   display: flex;
-  justify-content: end;
+  justify-content: left;
   margin-right: 10px
 }
 
 .bit-buoy-mobile .buoy-list {
   display: flex;
-  padding: 15px 0
+  padding-top: 15px;
+  padding-left: 0px
 }
 
 .bit-buoy-mobile .buoy-list .buoy-item {
@@ -20299,7 +20300,7 @@ ul {
 
 .bit-buoy-mobile .buoy-list .buoy-item .btn {
   width: 150px;
-  margin-left: 20px;
+  /* margin-left: 20px; */
   background: #0328EE;
   font-weight: 700;
   color: #fff;
@@ -21903,4 +21904,47 @@ ul {
     background-color: #d1d1d1;
   }
 
+  div.data-v-c7418f94 {
+    color: #000;
+  }
+
+
+
+  @media only screen and (max-width: 600px) {
+    /* img#logo-mainpage {
+      width: 75px;
+      height: 75px;
+
+    } */
+
+    div.arco-menu-inner {
+      padding: 14px;
+      font-size: 12px;
+    }
+
+    div.buoy-list {
+      margin: 0px 0px 0px 0px;
+      width: 70%;
+      font-size: 12;
+      display: flex;
+      left: 0;
+    }
+
+    div.bit-buoy-mobile {
+      margin: 0px 0px 0px 0px;
+    }
+
+    div.btn {
+      width: 70%;
+    }
+
+
+  }
+
+  @media screen {
+    div.footer {
+      /* position: fixed; */
+      bottom: 0px;
+    }
+  }
 }
