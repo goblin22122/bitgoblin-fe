@@ -118,7 +118,7 @@ export default function Home() {
             <MainPage></MainPage>
             <div className="footer" data-v-c7418f94="">
               <div className="box" data-v-c7418f94="">
-                <div className="left" data-v-c7418f94=""><img src="logo.svg" data-v-c7418f94="" />
+                <div className="left" data-v-c7418f94=""><img src="logo.svg" style={{ height: "80px", width: "80px" }} data-v-c7418f94="" />
                   <div className="menu" data-v-c7418f94="">
                     <div className="menu-list" data-v-c7418f94=""><a aria-current="page"
                       href={"/?ref=" + ref}

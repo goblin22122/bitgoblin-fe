@@ -1,4 +1,6 @@
 
+import { ChakraProvider } from '@chakra-ui/react';
+import { Grid, GridItem, Flex, Box } from '@chakra-ui/react';
 import Image from 'next/image';
 
 export function MainPage() {
@@ -143,6 +145,31 @@ export function MainPage() {
                         </div>
                     </div>
                 </div>
+            </div>
+            <div className="bit-road">
+                <div className="tit"><span>Partners &amp; Investors</span></div>
+                {/* <div className="tips"> When, how &amp; why we built <span style={{ color: "#A2F005" }}>BitGoblin.io?</span></div> */}
+                {/* <div className="bit-time-info">
+                </div> */}
+                <ChakraProvider>
+                    <Box alignItems={"center"} justifyContent={"center"}>
+                        <Flex gap={10} marginBottom={10} alignItems={"center"} justifyContent={"center"}>
+                            <Box><Image src="exchange/binance-labs-803334ad.svg" width={200} height={100} alt="binance" /></Box>
+                            <Box><Image src="exchange/Coinbase-logo-1.svg" width={200} height={100} alt="binance" /></Box>
+                            <Box><Image src="exchange/paradigm-xyz-logo-vector-cropped.svg" width={200} height={100} alt="binance" /></Box>
+                            <Box><Image src="exchange/a16z-crypto-seeklogo-cropped.svg" width={200} height={100} alt="binance" /></Box>
+
+
+                        </Flex>
+                        <Flex gap={10} alignItems={"center"} justifyContent={"center"}>
+                            <Box><Image src="exchange/full-uniswap-logo.svg" width={200} height={100} alt="binance" /></Box>
+                            <Box><Image src="exchange/chainlink-seeklogo.com-cropped.svg" width={200} height={100} alt="binance" /></Box>
+                            <Box><Image src="exchange/okx-seeklogo.com.svg" width={200} height={100} alt="binance" /></Box>
+                            <Box><Image src="exchange/bybit-logo.svg" width={200} height={100} alt="binance" /></Box>
+
+                        </Flex>
+                    </Box>
+                </ChakraProvider>
             </div>
         </div>
     )
