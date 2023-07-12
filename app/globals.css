@@ -20418,12 +20418,12 @@ ul {
 }
 
 .bit-layouts .footer[data-v-c7418f94] {
-  margin-top: 60px;
+  margin-top: 30px;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  padding: 56px 133px 32px;
-  height: 450px;
+  padding: 26px 133px 10px;
+  /* height: 350px; */
   background: #010D50;
   gap: 20px
 }
@@ -20509,7 +20509,7 @@ ul {
 }
 
 .bit-layouts .footer .copyright[data-v-c7418f94] {
-  width: 100%
+  width: 100%z
 }
 
 @media screen and (max-width: 1000px) {

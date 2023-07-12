@@ -1,10 +1,14 @@
 "use client"; // This is a client component
 import React, { useEffect, useState, useContext } from "react";
-import { ChakraProvider } from '@chakra-ui/react'
+import { ChakraProvider, Flex, Box, Spacer, Wrap, WrapItem, HStack, Grid, GridItem, Text } from '@chakra-ui/react'
 import Image from 'next/image';
 import Link from 'next/link';
 import { useSearchParams } from 'next/navigation'
 import { redirect } from 'next/navigation';
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {
+  faTwitter, faTelegram, faConnectdevelop
+} from "@fortawesome/free-brands-svg-icons";
 
 import { ethers, BigNumber } from "ethers";
 
@@ -116,35 +120,74 @@ export default function Home() {
               </div>
             </div>
             <MainPage></MainPage>
-            <div className="footer" data-v-c7418f94="">
-              <div className="box" data-v-c7418f94="">
-                <div className="left" data-v-c7418f94=""><img src="logo.svg" style={{ height: "80px", width: "80px" }} data-v-c7418f94="" />
-                  <div className="menu" data-v-c7418f94="">
-                    <div className="menu-list" data-v-c7418f94=""><a aria-current="page"
-                      href={"/?ref=" + ref}
-                      className="router-link-active router-link-exact-active" data-v-c7418f94="">
-                      <div className="item" data-v-c7418f94="">HOME</div>
-                    </a><a href="https://t.me/BitGoblinOfficialCommunity" target="_blank"
-                      data-v-c7418f94="">
-                        <div className="item" data-v-c7418f94="">Telegram</div>
-                      </a><a href="/staking" className="" data-v-c7418f94="">
-                        <div className="item" data-v-c7418f94="">DAPP</div>
-                      </a><a href="https://twitter.com/bitgoblin18" target="_blank" data-v-c7418f94="">
-                        <div className="item" data-v-c7418f94="">Twitter</div>
-                      </a><a href="https://bitgoblin.gitbook.io/whitepaper" target="_blank"
-                        data-v-c7418f94="">
-                        <div className="item" data-v-c7418f94="">Whitepaper</div>
-                      </a></div>
+            <div className="footer" data-v-c7418f94="" style={{ alignItems: "center" }} >
+              <div className="box" data-v-c7418f94="" >
+                <div className="left" data-v-c7418f94="" >
+                  {/* <img src="logo.svg" style={{ height: "80px", width: "80px" }} data-v-c7418f94="" /> */}
+                  <div className="menu" data-v-c7418f94="" style={{ marginTop: "0px", alignItems: "center" }}>
+                    {/* <div className="menu-list" data-v-c7418f94="" style={{}}> */}
+                    {/* <a aria-current="page"
+                        href={"/?ref=" + ref}
+                        className="router-link-active router-link-exact-active" data-v-c7418f94="">
+                        <div className="item" data-v-c7418f94="">HOME</div>
+                      </a> */}
+                    <Grid templateColumns='repeat(3, 1fr)' gridAutoColumns={"repeat(auto-fill, minmax(186px, 1fr));"} id="gridddd" gap={30}>
+                      <GridItem>
+                        <Box>
+                          <Box fontSize={20} as="b">Contacts</Box>
+                          <Box lineHeight={2}>
+                            <Text><FontAwesomeIcon icon={faTelegram} /><a href="mailto: abc@gmail.com">abc@gmail.com</a></Text>
+                            <Text><FontAwesomeIcon icon={faTelegram} /><a href="https://bitgoblin.io">www.bitgoblin.io</a></Text>
+                          </Box>
+                        </Box>
+                      </GridItem>
+
+
+                      <GridItem textAlign={"center"}>
+                        <Box>
+                          <Box fontSize={20} as="b">Locations</Box>
+                          <Box>
+                            <Image src="/location.svg" height={200} width={200} alt="location"></Image>
+                          </Box>
+                        </Box>
+                      </GridItem>
+
+
+                      <GridItem alignItems={"flex-end"} marginLeft={"auto"}>
+                        <Box>
+                          <Box fontSize={20} as="b" >Social</Box>
+                          <Box>
+                            <Flex gap={10}>
+                              <Box >
+                                <a href="https://t.me/BitGoblinOfficialCommunity" target="_blank"
+                                  data-v-c7418f94="" >
+                                  <FontAwesomeIcon icon={faTelegram} size="2x"></FontAwesomeIcon>
+                                  {/* <div className="item" data-v-c7418f94="">Telegram</div> */}
+                                </a>
+                              </Box>
+                              <Box >
+                                <a href="https://twitter.com/bitgoblin18" target="_blank" data-v-c7418f94="" className="fa fa-twitter">
+                                  {/* <div className="item" data-v-c7418f94="">Twitter</div> */}
+                                  <FontAwesomeIcon icon={faTwitter} size="2x"></FontAwesomeIcon>
+                                </a>
+                              </Box>
+                            </Flex>
+                          </Box>
+                        </Box>
+                      </GridItem>
+                    </Grid>
+
+                    {/* </div> */}
                   </div>
                 </div>
               </div>
-              <div className="dividers" data-v-c7418f94=""></div>
-              <div className="copyright" data-v-c7418f94=""> All rights reserved </div>
+              <div className="dividers" data-v-c7418f94="" style={{ width: "1200px" }}> </div>
+              <div className="copyright" data-v-c7418f94="">Copyright 2022 by BitGoblin. All rights reserved </div>
             </div>
           </div>
         </div>
       </div>
-      <div className="arco-trigger-popup arco-trigger-position-bl arco-menu-pop-trigger" trigger-placement="bl"
+      {/* <div className="arco-trigger-popup arco-trigger-position-bl arco-menu-pop-trigger" trigger-placement="bl"
         animation-class="fade-in" style={{ zIndex: "0", pointerEvents: "auto" }}>
         <div className="arco-trigger-popup-wrapper" style={{ display: "none" }}>
           <div className="arco-trigger-content">
@@ -154,7 +197,7 @@ export default function Home() {
           </div>
           <div className="arco-trigger-arrow"></div>
         </div>
-      </div>
+      </div> */}
     </main >
 
   )
