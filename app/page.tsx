@@ -9,6 +9,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faTwitter, faTelegram, faConnectdevelop
 } from "@fortawesome/free-brands-svg-icons";
+import { faGlobe, faSquareEnvelope } from "@fortawesome/free-solid-svg-icons";
 
 import { ethers, BigNumber } from "ethers";
 
@@ -136,8 +137,8 @@ export default function Home() {
                         <Box>
                           <Box fontSize={20} as="b">Contacts</Box>
                           <Box lineHeight={2}>
-                            <Text><FontAwesomeIcon icon={faTelegram} /><a href="mailto: abc@gmail.com">abc@gmail.com</a></Text>
-                            <Text><FontAwesomeIcon icon={faTelegram} /><a href="https://bitgoblin.io">www.bitgoblin.io</a></Text>
+                            <Text><FontAwesomeIcon icon={faSquareEnvelope} /><a href="mailto: abc@gmail.com"> abc@gmail.com</a></Text>
+                            <Text><FontAwesomeIcon icon={faGlobe} /><a href="https://bitgoblin.io"> www.bitgoblin.io</a></Text>
                           </Box>
                         </Box>
                       </GridItem>
