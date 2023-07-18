@@ -349,14 +349,18 @@ export default function App() {
                                                                     <Center p={5}>
                                                                         <OverlayTrigger show={show} placement="right" overlay={renderTooltip}>
                                                                             <Button
-                                                                                borderRadius={10}
-                                                                                backgroundColor="#1F7039"
+                                                                                // borderRadius={10}
+                                                                                backgroundColor="#010D50"
+                                                                                border={0}
                                                                                 fontSize={20}
                                                                                 color="white"
                                                                                 fontWeight="bold"
                                                                                 onClick={copyRef}
                                                                                 onMouseLeave={handleOnMouseLeave}
-                                                                            > {"Copy your referral link"} <span><i className="fa fa-copy"></i></span>
+                                                                            >
+                                                                                {/* {"Copy your referral link"}  */}
+                                                                                <img src="buttons/copy.svg" width={200} />
+                                                                                <span><i className="fa fa-copy"></i></span>
                                                                             </Button>
                                                                         </OverlayTrigger>
                                                                         {/* <Button

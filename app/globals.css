@@ -21924,7 +21924,7 @@ ul {
 
     div.buoy-list {
       margin: 0px 0px 0px 0px;
-      width: 70%;
+      width: 60%;
       font-size: 12;
       display: flex;
       left: 0;
@@ -21936,8 +21936,16 @@ ul {
 
     div.btn {
       width: 70%;
+      /* height: 10%; */
     }
 
+    div.item {
+      width: 90%;
+    }
+
+    input.chakra-input {
+      width: 160px;
+    }
 
   }
 
