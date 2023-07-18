@@ -17,8 +17,8 @@ export function MainPage() {
                                 <span>And Decentralised Smart Contracts And Earn </span><span style={{ color: "#85FD01" }}>1.8%~2.8% </span><span>Passive Income Daily!</span>
                             </div>
                             <div className="btn"><a href="/staking" className="">
-                                <div className="bit-btn">Open the Dapp</div>
-                                {/* <Image src="open.gif" width={239} height={68} alt="" unoptimized={true}></Image> */}
+                                {/* <div className="bit-btn">Open the Dapp</div> */}
+                                <Image src="buttons/OPENTHEAPP.gif" width={239} height={68} alt="" unoptimized={true}></Image>
                             </a></div>
                             <div className="contract-list"></div>
                         </div>

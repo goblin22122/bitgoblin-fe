@@ -21946,5 +21946,9 @@ ul {
       /* position: fixed; */
       bottom: 0px;
     }
+
+    div.btn {
+      padding: 0px 0px 0px 0px;
+    }
   }
 }
