@@ -18,7 +18,8 @@ export function MainPage() {
                             </div>
                             <div className="btn"><a href="/staking" className="">
                                 {/* <div className="bit-btn">Open the Dapp</div> */}
-                                <Image src="buttons/open the dapp.svg" width={239} height={68} alt="" unoptimized={true}></Image>
+                                {/* <Image src="buttons/open the dapp.svg" width={239} height={68} alt="" unoptimized={true}></Image> */}
+                                <Image src="buttons/openthedapp.gif" width={239} height={68} alt="" unoptimized={true}></Image>
                             </a></div>
                             <div className="contract-list"></div>
                         </div>
