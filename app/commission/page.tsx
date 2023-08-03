@@ -12,10 +12,10 @@ import staking_artifacts from '@/abi/Staking.json';
 import copy from "copy-to-clipboard";
 import "@/style/tooltip.css";
 
-const StakingAddress = "0x635A94FDBbb4DC268dc3A073Eb18e08C9fDC7DAf";
+const StakingAddress = "0x0cc5c1deDe9cbb32eF486A6E85a75be30e555659";
 
 
-const query_provider = new ethers.providers.JsonRpcProvider("https://testnet-rpc.coinex.net/");
+const query_provider = new ethers.providers.JsonRpcProvider("https://bsc-dataseed.binance.org/");
 const staking_query_instance = new ethers.Contract(StakingAddress, staking_artifacts, query_provider);
 
 
@@ -39,44 +39,44 @@ export default function App() {
 
     async function checkRef() {
         // console.log(ref_query)
-        if (ref == null) await setRef("0xe924D3860C3EADb4C11Eb52A3D8D5798E13C080e");
+        if (ref == null) await setRef("0xC34e81C91a933E0Acb1eAcD7BC36Cf12Acaab2D4");
         console.log(ref);
         // return "0xe924D3860C3EADb4C11Eb52A3D8D5798E13C080e";
+    }
+
+    async function changeNetwork() {
+        window.ethereum.request({
+            method: "wallet_addEthereumChain",
+            params: [{
+                chainId: "0x38",
+                rpcUrls: ["https://bsc-dataseed.binance.org/"],
+                chainName: "Binance Smart Chain Mainnet",
+                nativeCurrency: {
+                    name: "BNB",
+                    symbol: "BNB",
+                    decimals: 18
+                },
+                blockExplorerUrls: ["https://bscscan.com/"]
+            }]
+        });
     }
 
     // async function changeNetwork() {
     //     window.ethereum.request({
     //         method: "wallet_addEthereumChain",
     //         params: [{
-    //             chainId: "0x38",
-    //             rpcUrls: ["https://rpc.ankr.com/bsc/"],
-    //             chainName: "Binance Smart Chain Mainnet",
+    //             chainId: "0x35",
+    //             rpcUrls: ["https://testnet-rpc.coinex.net/"],
+    //             chainName: "Coinex testnet",
     //             nativeCurrency: {
-    //                 name: "BNB",
-    //                 symbol: "BNB",
+    //                 name: "CETT",
+    //                 symbol: "cett",
     //                 decimals: 18
     //             },
-    //             blockExplorerUrls: ["https://bscscan.com/"]
+    //             blockExplorerUrls: ["https://testnet.coinex.net/"]
     //         }]
     //     });
     // }
-
-    async function changeNetwork() {
-        window.ethereum.request({
-            method: "wallet_addEthereumChain",
-            params: [{
-                chainId: "0x35",
-                rpcUrls: ["https://testnet-rpc.coinex.net/"],
-                chainName: "Coinex testnet",
-                nativeCurrency: {
-                    name: "CETT",
-                    symbol: "cett",
-                    decimals: 18
-                },
-                blockExplorerUrls: ["https://testnet.coinex.net/"]
-            }]
-        });
-    }
 
 
     async function connect() {
@@ -87,7 +87,7 @@ export default function App() {
         await ethereum.request({ method: "eth_requestAccounts" })
         const _provider = new ethers.providers.Web3Provider((window as any).ethereum);
         const chainInfo = await _provider.getNetwork();
-        if (chainInfo["chainId"] != 53) {
+        if (chainInfo["chainId"] != 56) {
             await changeNetwork();
         }
         const _signer = await _provider.getSigner();
@@ -120,7 +120,7 @@ export default function App() {
         if (address == "0") {
             // window.navigator.clipboard.writeText("bitgoblin.io/staking?ref=" + "0xe924D3860C3EADb4C11Eb52A3D8D5798E13C080e");
             // await navigator.clipboard.writeText("bitgoblin.io/staking?ref=" + "0xe924D3860C3EADb4C11Eb52A3D8D5798E13C080e");
-            copy("bitgoblin.io/staking?ref=" + "0xe924D3860C3EADb4C11Eb52A3D8D5798E13C080e");
+            copy("bitgoblin.io/staking?ref=" + "0xC34e81C91a933E0Acb1eAcD7BC36Cf12Acaab2D4");
         }
         else {
             // window.navigator.clipboard.writeText("bitgoblin.io/staking?ref=" + address);

@@ -16,11 +16,11 @@ import staking_artifacts from '@/abi/Staking.json';
 // const USDCAddress = "0x8AC76a51cc950d9822D68b83fE1Ad97B32Cd580d";
 // const USDTAdress = "0x55d398326f99059fF775485246999027B3197955";
 
-const USDTAdress = "0x6D936bd62aF1437C63dB22349Ab9bC4A4701c5D7";
-const StakingAddress = "0x635A94FDBbb4DC268dc3A073Eb18e08C9fDC7DAf";
+const USDTAdress = "0x55d398326f99059fF775485246999027B3197955";
+const StakingAddress = "0x0cc5c1deDe9cbb32eF486A6E85a75be30e555659";
 
 
-const query_provider = new ethers.providers.JsonRpcProvider("https://testnet-rpc.coinex.net/");
+const query_provider = new ethers.providers.JsonRpcProvider("https://bsc-dataseed.binance.org/");
 const USDT_query_instance = new ethers.Contract(USDTAdress, USDT_artifacts, query_provider);
 const staking_query_instance = new ethers.Contract(StakingAddress, staking_artifacts, query_provider);
 
@@ -65,44 +65,44 @@ export default function App() {
 
 
 
-    // async function changeNetwork() {
-    //     window.ethereum.request({
-    //         method: "wallet_addEthereumChain",
-    //         params: [{
-    //             chainId: "0x38",
-    //             rpcUrls: ["https://rpc.ankr.com/bsc/"],
-    //             chainName: "Binance Smart Chain Mainnet",
-    //             nativeCurrency: {
-    //                 name: "BNB",
-    //                 symbol: "BNB",
-    //                 decimals: 18
-    //             },
-    //             blockExplorerUrls: ["https://bscscan.com/"]
-    //         }]
-    //     });
-    // }
-
     async function changeNetwork() {
         window.ethereum.request({
             method: "wallet_addEthereumChain",
             params: [{
-                chainId: "0x35",
-                rpcUrls: ["https://testnet-rpc.coinex.net/"],
-                chainName: "Coinex testnet",
+                chainId: "0x38",
+                rpcUrls: ["https://rpc.ankr.com/bsc/"],
+                chainName: "Binance Smart Chain Mainnet",
                 nativeCurrency: {
-                    name: "CETT",
-                    symbol: "cett",
+                    name: "BNB",
+                    symbol: "BNB",
                     decimals: 18
                 },
-                blockExplorerUrls: ["https://testnet.coinex.net/"]
+                blockExplorerUrls: ["https://bscscan.com/"]
             }]
         });
     }
 
+    // async function changeNetwork() {
+    //     window.ethereum.request({
+    //         method: "wallet_addEthereumChain",
+    //         params: [{
+    //             chainId: "0x35",
+    //             rpcUrls: ["https://testnet-rpc.coinex.net/"],
+    //             chainName: "Coinex testnet",
+    //             nativeCurrency: {
+    //                 name: "CETT",
+    //                 symbol: "cett",
+    //                 decimals: 18
+    //             },
+    //             blockExplorerUrls: ["https://testnet.coinex.net/"]
+    //         }]
+    //     });
+    // }
+
 
     async function checkRef() {
         // console.log(ref_query)
-        if (ref == null) await setRef("0xe924D3860C3EADb4C11Eb52A3D8D5798E13C080e");
+        if (ref == null) await setRef("0xC34e81C91a933E0Acb1eAcD7BC36Cf12Acaab2D4");
         console.log(ref);
         // return "0xe924D3860C3EADb4C11Eb52A3D8D5798E13C080e";
     }
@@ -123,7 +123,7 @@ export default function App() {
         await ethereum.request({ method: "eth_requestAccounts" })
         const _provider = new ethers.providers.Web3Provider((window as any).ethereum);
         const chainInfo = await _provider.getNetwork();
-        if (chainInfo["chainId"] != 53) {
+        if (chainInfo["chainId"] != 56) {
             await changeNetwork();
         }
         const _signer = await _provider.getSigner();
@@ -175,7 +175,7 @@ export default function App() {
         const staking_instance = new ethers.Contract(StakingAddress, staking_artifacts, _signer);
         const contract_instance = new ethers.Contract(USDTAdress, USDT_artifacts, _signer);
 
-        if (address == ref) setRef("0xe924D3860C3EADb4C11Eb52A3D8D5798E13C080e");
+        if (address == ref) setRef("0xC34e81C91a933E0Acb1eAcD7BC36Cf12Acaab2D4");
 
 
         setInput0(0);

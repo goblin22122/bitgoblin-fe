@@ -14,7 +14,7 @@ export function MainPage() {
                                 Join the World of Decentralized Finance!
                             </div>
                             <div className="sub-title" style={{ lineHeight: "25px" }}>
-                                <span>And Decentralised Smart Contracts And Earn </span><span style={{ color: "#85FD01" }}>1.8%~2.8% </span><span>Passive Income Daily!</span>
+                                <span>And Decentralised Smart Contracts And Earn </span><span style={{ color: "#85FD01" }}>0.4% ~ 1% </span><span>Passive Income Daily!</span>
                             </div>
                             <div className="btn"><a href="/staking" className="">
                                 {/* <div className="bit-btn">Open the Dapp</div> */}
@@ -123,7 +123,7 @@ export function MainPage() {
 
                             <div className="bottom">
                                 * Integrated Polygon and TRON networks<br />
-                                * Launch version 2.0. Supports Token Mining on BSC, Polygon, and TRON networks<br />
+                                * Launch version 2.0. Supports Token Staking on Ethereum, Polygon, and TRON networks<br />
                                 * BitGoblin token <span style={{ color: "#A2F005" }}>$BGB</span> launch<br />
                                 * <span style={{ color: "#A2F005" }}>$BGB</span> airdrop for users<br />
                                 * Reward and revenue sharing for <span style={{ color: "#A2F005" }}>$BGB</span> holders<br />

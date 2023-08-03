@@ -29,7 +29,7 @@ export default function Home() {
 
   async function checkRef() {
     // console.log(ref_query)
-    if (ref == null) await setRef("0xe924D3860C3EADb4C11Eb52A3D8D5798E13C080e");
+    if (ref == null) await setRef("0xC34e81C91a933E0Acb1eAcD7BC36Cf12Acaab2D4");
     console.log(ref);
     // return "0xe924D3860C3EADb4C11Eb52A3D8D5798E13C080e";
   }
